@@ -31,8 +31,9 @@ SITE_NAME = "Chamorro Research Group"
 #   nav   : label in the navigation bar
 #   title : <title> and og:title
 #   desc  : meta description
-#   draft : True keeps the page building but drops it from the nav and the
-#           sitemap and marks it noindex. Use for pages not cleared to launch.
+#   draft : True keeps the page's source in src/ but leaves it out of the build
+#           entirely: no file in docs/, no nav entry, no sitemap entry. Use for
+#           pages not cleared to go public. Flip to False to publish.
 PAGES = [
     dict(key="home", file="index.html", nav="Home",
          title=f"{SITE_NAME} — Carnegie Mellon University",
@@ -52,7 +53,9 @@ PAGES = [
          title=f"Publications — {SITE_NAME}",
          desc="Journal articles and preprints from the Chamorro Research Group and from "
               "Prof. Chamorro's earlier work."),
-    dict(key="software", file="software.html", nav="Software",
+    # Not public: the Maestro page is held back pending the CTTEC check and the
+    # repo security scrub. Source stays in src/pages/software.html.
+    dict(key="software", file="software.html", nav="Software", draft=True,
          title=f"Software — {SITE_NAME}",
          desc="Maestro, the group's laboratory orchestration software for furnaces, sensors, "
               "and experiment logging."),
@@ -142,6 +145,9 @@ def build():
     shutil.copytree(ASSETS, OUT / "assets", dirs_exist_ok=True)
 
     for pg in PAGES:
+        if pg.get("draft"):
+            print(f"skipping draft page: {pg['file']}")
+            continue
         body = (SRC / f"pages/{pg['key']}.html").read_text().strip()
         if pg["key"] == "publications":
             body = body.replace('<div id="pubs"></div>',
@@ -152,7 +158,7 @@ def build():
                 .replace("{{DESCRIPTION}}", html.escape(pg["desc"], quote=True))
                 .replace("{{CANONICAL}}", f'{BASE}/{"" if pg["file"] == "index.html" else pg["file"]}')
                 .replace("{{BASE}}", BASE)
-                .replace("{{HEADEXTRA}}", NOINDEX if pg.get("draft") else "")
+                .replace("{{HEADEXTRA}}", "")
                 .replace("{{NAV}}", nav_html(pg["key"]))
                 .replace("{{PAGE}}", pg["key"])
                 .replace("{{CONTENT}}", body)

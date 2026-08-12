@@ -29,9 +29,11 @@ Nothing in `docs/` is edited by hand. `build.py` deletes and regenerates it.
   `assets/img/<name>.jpg` from the page fragment.
 - **Page titles, meta descriptions, nav order**: the `PAGES` list at the top of
   `build.py`.
-- **Hiding a page**: add `draft=True` to its entry in `PAGES`. The page still builds
-  and is reachable by URL, but it drops out of the nav and the sitemap and gets a
-  `noindex` tag. Use this for pages not yet cleared to go public.
+- **Holding a page back**: add `draft=True` to its entry in `PAGES`. The source stays
+  in `src/pages/` but the page is left out of the build entirely: no file in `docs/`,
+  no nav entry, no sitemap entry, nothing published. Flip it to `False` to release.
+  The Software page (Maestro) is currently held back this way, pending the CTTEC
+  check and the repo security scrub.
 
 Build and preview locally:
 
