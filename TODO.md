@@ -14,7 +14,9 @@ until the DNS ticket is filed, so all of this can be worked through at leisure.
 - [ ] Photo for Dhiya Srikanth. Currently a "DS" monogram placeholder in
       `src/pages/people.html`. Add `assets/img/dhiyasrikanth.jpg` and swap the
       `<div class="mono">` for an `<img class="photo">` like the other students.
-- [ ] Confirm the PI photo and the banner (a campus aerial) are the ones to keep.
+- [x] PI photo. Replaced 2026-08-12 with a crop of
+      `OneDrive/Work/CMU/Website/juanchamorro-closeup.png`.
+- [ ] Confirm the banner (a campus aerial) is the one to keep.
 
 ## Content to verify
 
