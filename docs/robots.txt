@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://chamorrolab.andrew.cmu.edu/sitemap.xml

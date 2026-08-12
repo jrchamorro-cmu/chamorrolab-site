@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{TITLE}}</title>
+<meta name="description" content="{{DESCRIPTION}}">
+<link rel="canonical" href="{{CANONICAL}}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Chamorro Research Group">
+<meta property="og:title" content="{{TITLE}}">
+<meta property="og:description" content="{{DESCRIPTION}}">
+<meta property="og:url" content="{{CANONICAL}}">
+<meta property="og:image" content="{{BASE}}/assets/img/grouppic.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#C41230">
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+<link rel="stylesheet" href="assets/styles.css">
+{{HEADEXTRA}}</head>
+<body>
+
+<div class="topband"></div>
+<div class="masthead">
+  <div class="wrap">
+    <div class="mhrow">
+      <div>
+        <div class="inst">Carnegie Mellon University &middot; Department of Materials Science and Engineering</div>
+        <h1><a href="index.html">Chamorro Research Group</a></h1>
+      </div>
+      <img class="cmulogo" src="assets/img/cmulogo.png" alt="Carnegie Mellon University">
+    </div>
+    <nav id="nav">
+{{NAV}}
+    </nav>
+  </div>
+</div>
+
+<main class="wrap">
+
+<section class="page visible" id="pg-{{PAGE}}">
+{{CONTENT}}
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>&copy; {{YEAR}} Chamorro Research Group</div>
+    <div><a href="https://mse.engineering.cmu.edu/">CMU Materials Science and Engineering</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

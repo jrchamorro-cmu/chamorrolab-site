@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Software — Chamorro Research Group</title>
+<meta name="description" content="Maestro, the group&#x27;s laboratory orchestration software for furnaces, sensors, and experiment logging.">
+<link rel="canonical" href="https://chamorrolab.andrew.cmu.edu/software.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Chamorro Research Group">
+<meta property="og:title" content="Software — Chamorro Research Group">
+<meta property="og:description" content="Maestro, the group&#x27;s laboratory orchestration software for furnaces, sensors, and experiment logging.">
+<meta property="og:url" content="https://chamorrolab.andrew.cmu.edu/software.html">
+<meta property="og:image" content="https://chamorrolab.andrew.cmu.edu/assets/img/grouppic.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#C41230">
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<div class="topband"></div>
+<div class="masthead">
+  <div class="wrap">
+    <div class="mhrow">
+      <div>
+        <div class="inst">Carnegie Mellon University &middot; Department of Materials Science and Engineering</div>
+        <h1><a href="index.html">Chamorro Research Group</a></h1>
+      </div>
+      <img class="cmulogo" src="assets/img/cmulogo.png" alt="Carnegie Mellon University">
+    </div>
+    <nav id="nav">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="people.html">People</a>
+      <a href="publications.html">Publications</a>
+      <a href="software.html" class="active">Software</a>
+      <a href="facilities.html">Facilities</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="resources.html">Resources</a>
+    </nav>
+  </div>
+</div>
+
+<main class="wrap">
+
+<section class="page visible" id="pg-software">
+<h2>Software</h2>
+  <p>Running a synthesis lab generates a great deal of operational knowledge that usually stays trapped in one lab, or in one person's head: which furnace runs hot, when a gas cylinder will run out, what thermal history produced the good crystal. We build software to capture it, and we share what we build.</p>
+
+  <div class="sect">
+    <h3 style="font-size:21px">Maestro</h3>
+    <p class="small" style="margin-bottom:14px">Open-source lab instrument orchestrator &middot; <a href="https://github.com/jrchamorro-cmu/maestro">github.com/jrchamorro-cmu/maestro</a></p>
+    <p>A solid state chemistry lab is full of instruments that do not talk to each other. Furnaces run multi-day heating sequences with no record beyond a notebook entry. Gas cylinders empty without warning. Chemical inventory lives in a spreadsheet nobody updates. Maestro connects all of it into one system: every instrument reachable from a web dashboard on any lab computer, every reading logged centrally.</p>
+
+    <figure class="swdiag">
+      <svg viewBox="0 0 860 330" role="img" aria-label="Maestro architecture: furnaces, gas sensors, and chemical records feed into three isolated Maestro processes on one lab computer, which serve web dashboards and central logs.">
+        <defs>
+          <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0 0 L10 5 L0 10 z" fill="currentColor"/>
+          </marker>
+        </defs>
+        <g fill="none" stroke="currentColor" stroke-width="1.3">
+          <rect x="20" y="40" width="200" height="66"/>
+          <rect x="20" y="132" width="200" height="66"/>
+          <rect x="20" y="224" width="200" height="66"/>
+          <rect x="360" y="30" width="200" height="270" stroke="#C41230" stroke-width="2.5"/>
+          <rect x="380" y="76" width="160" height="44"/>
+          <rect x="380" y="142" width="160" height="44"/>
+          <rect x="380" y="208" width="160" height="44"/>
+          <rect x="660" y="70" width="180" height="70"/>
+          <rect x="660" y="190" width="180" height="70"/>
+        </g>
+        <g stroke="currentColor" stroke-width="1.3" fill="none">
+          <line x1="220" y1="73" x2="358" y2="96" marker-end="url(#arr)"/>
+          <line x1="220" y1="165" x2="358" y2="165" marker-end="url(#arr)"/>
+          <line x1="220" y1="257" x2="358" y2="232" marker-end="url(#arr)"/>
+          <line x1="560" y1="120" x2="658" y2="106" marker-end="url(#arr)"/>
+          <line x1="560" y1="210" x2="658" y2="224" marker-end="url(#arr)"/>
+        </g>
+        <g fill="currentColor" font-size="13" font-weight="700">
+          <text x="120" y="63" text-anchor="middle">8 muffle furnaces</text>
+          <text x="120" y="155" text-anchor="middle">Gas &amp; air sensors</text>
+          <text x="120" y="247" text-anchor="middle">Chemical records</text>
+          <text x="460" y="52" text-anchor="middle" fill="#C41230">MAESTRO</text>
+          <text x="750" y="93" text-anchor="middle">Any lab computer</text>
+          <text x="750" y="213" text-anchor="middle">Central records</text>
+        </g>
+        <g fill="currentColor" font-size="11.5" opacity="0.75">
+          <text x="120" y="83" text-anchor="middle">commodity PID controllers</text>
+          <text x="120" y="175" text-anchor="middle">cylinder pressure, air quality</text>
+          <text x="120" y="267" text-anchor="middle">inventory + SDS</text>
+          <text x="460" y="66" text-anchor="middle">one lab computer, three processes</text>
+          <text x="750" y="113" text-anchor="middle">web dashboard, no install</text>
+          <text x="750" y="233" text-anchor="middle">every run, every reading</text>
+          <text x="285" y="72" text-anchor="middle">Modbus</text>
+          <text x="285" y="158" text-anchor="middle">Bluetooth LE</text>
+          <text x="285" y="263" text-anchor="middle">shared drive</text>
+          <text x="608" y="98" text-anchor="middle">HTTP</text>
+          <text x="608" y="232" text-anchor="middle">logs</text>
+        </g>
+        <g fill="currentColor" font-size="12" font-weight="600">
+          <text x="460" y="102" text-anchor="middle">Furnaces</text>
+          <text x="460" y="168" text-anchor="middle">Sensors</text>
+          <text x="460" y="234" text-anchor="middle">Inventory</text>
+        </g>
+      </svg>
+      <figcaption>The instruments feed three isolated Maestro processes on one lab computer; any browser on the lab network gets the dashboards, and everything is logged.</figcaption>
+    </figure>
+
+    <div class="swstats">
+      <div><b>8</b><span>furnaces orchestrated</span></div>
+      <div><b>0.1&thinsp;&deg;C/hr</b><span>slowest controlled cooling</span></div>
+      <div><b>3</b><span>isolated modules</span></div>
+      <div><b>24/7</b><span>logging &amp; monitoring</span></div>
+    </div>
+
+    <div class="swcards">
+      <div class="swcard">
+        <h4>Furnaces</h4>
+        <p>Drives the whole furnace fleet through off-the-shelf controllers: multi-step temperature sequences (ramp, dwell, controlled cooling), software safety limits, a claim system so two people never program the same furnace, per-run records, and health monitoring.</p>
+        <div class="swwhy">Why it matters</div>
+        <p>Crystal growth lives and dies on thermal history. Growths run unattended for days, and the difference between a powder and a beautiful single crystal can be cooling at 0.1&nbsp;&deg;C/hr instead of 1&nbsp;&deg;C/hr. With every run recorded automatically, the growth that worked can be traced and repeated exactly &mdash; and a furnace that starts drifting is caught before it costs a sample.</p>
+      </div>
+      <div class="swcard">
+        <h4>Gas sensors</h4>
+        <p>Wireless pressure sensors on gas cylinders and an air quality monitor, read over Bluetooth, with full history and an overnight leak check.</p>
+        <div class="swwhy">Why it matters</div>
+        <p>Furnace runs consume gas continuously for days, and a cylinder that quietly empties mid-run ruins the atmosphere &mdash; and the sample &mdash; without anyone noticing. Pressure trends forecast when a swap is due before it becomes an emergency, the leak check protects both people and expensive gas, and nobody walks to the lab at 11&nbsp;pm just to read a gauge.</p>
+      </div>
+      <div class="swcard">
+        <h4>Inventory</h4>
+        <p>The lab's chemical inventory and safety data sheets, searchable from the same dashboard as everything else.</p>
+        <div class="swwhy">Why it matters</div>
+        <p>Planning a synthesis starts with knowing what is actually on the shelf. A live inventory means no duplicate orders and no discovering mid-week that a precursor ran out, and having the SDS one click away at the point of use turns safety compliance from a chore into a habit.</p>
+      </div>
+    </div>
+
+    <div class="secthead" style="margin-top:30px">Design principles</div>
+    <div class="swprin">
+      <div><b>Isolation</b>One module drives real heat. Each module is a separate process, so a Bluetooth glitch or an inventory bug can never take furnace control down with it.</div>
+      <div><b>Commodity hardware</b>No proprietary DAQ, no custom electronics: off-the-shelf furnace controllers, inexpensive wireless sensors, and one ordinary computer.</div>
+      <div><b>Data first</b>Every reading and every run is logged centrally. The lab's operational history becomes something you can search and analyze, not something you have to remember.</div>
+    </div>
+
+    <p style="margin-top:26px">If you use Maestro, adapt it to your own lab, or want help connecting your instruments, <a href="mailto:jrchamorro@cmu.edu">we would like to hear from you</a>.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>&copy; 2026 Chamorro Research Group</div>
+    <div><a href="https://mse.engineering.cmu.edu/">CMU Materials Science and Engineering</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
