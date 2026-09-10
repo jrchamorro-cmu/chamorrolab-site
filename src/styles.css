@@ -70,6 +70,9 @@ p{margin:0 0 13px}
 .sponsors img{display:block}
 .sponsor{margin:0;text-align:center}
 .sponsor figcaption{font-size:15px;color:var(--muted);padding-top:10px}
+/* the Kaufman wordmark is black and blue: keep it on white in dark mode */
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .sponsor.kaufman{background:#FFFFFF;padding:14px 18px}}
+:root[data-theme="dark"] .sponsor.kaufman{background:#FFFFFF;padding:14px 18px}
 .newsrow{display:grid;grid-template-columns:140px 1fr;gap:20px;padding:10px 0;border-bottom:1px solid var(--rule)}
 .newsrow:last-child{border-bottom:0}
 .newsrow .d{font-size:12.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding-top:2px}
