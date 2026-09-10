@@ -63,8 +63,8 @@ p{margin:0 0 13px}
 .figure{margin:26px 0}
 .figure img{width:100%}
 .figure figcaption{font-size:13px;color:var(--muted);padding-top:8px}
-.figure.hero{margin-top:0}
-.figure.hero img{width:auto;max-width:100%;max-height:420px;display:block}
+.figure.hero{margin:30px auto 26px;width:85%}
+.figure.hero img{width:100%;display:block}
 .sponsors{display:flex;align-items:center;gap:38px;flex-wrap:wrap;background:#FFFFFF;border:1px solid var(--rule);padding:20px 26px}
 .sponsors img{display:block}
 .newsrow{display:grid;grid-template-columns:140px 1fr;gap:20px;padding:10px 0;border-bottom:1px solid var(--rule)}
