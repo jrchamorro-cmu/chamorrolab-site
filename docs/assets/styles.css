@@ -155,10 +155,17 @@ p{margin:0 0 13px}
 footer{border-top:2px solid var(--rule-strong)}
 footer .wrap{padding:20px 22px 40px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
 
-/* research: text beside the growth clip */
-.rmedia{display:grid;grid-template-columns:1fr 260px;gap:40px;align-items:start}
-.rmedia h3{margin-top:0}
-.growth{margin:6px 0 0}
-.growth video{width:100%;display:block;background:#000}
-.growth figcaption{font-size:13px;color:var(--muted);padding-top:8px}
-@media (max-width:700px){.rmedia{grid-template-columns:1fr}.growth{max-width:320px}}
+/* research: alternating text and figure rows */
+.rrow{display:grid;grid-template-columns:1fr 340px;gap:52px;align-items:center;padding:34px 0;border-bottom:1px solid var(--rule)}
+.rrow:last-child{border-bottom:0}
+.rrow.flip{grid-template-columns:340px 1fr}
+.rrow.flip .rtext{order:2}
+.rrow.flip .rfigure{order:1}
+.rrow h3{margin-top:0}
+.rrow p:last-child{margin-bottom:0}
+.rfigure{margin:0}
+.rfig{width:100%;height:auto;display:block}
+.rfigure video{width:100%;display:block;background:#000}
+.rfigure.growth{max-width:260px;justify-self:center}
+.rfigure figcaption{font-size:13px;color:var(--muted);padding-top:10px}
+@media (max-width:760px){.rrow,.rrow.flip{grid-template-columns:1fr;gap:20px}.rrow.flip .rtext{order:1}.rrow.flip .rfigure{order:2}.rfigure{max-width:340px}}
