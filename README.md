@@ -39,7 +39,7 @@ Build and preview locally:
 
 ```
 python3 build.py
-python3 -m http.server -d docs 8000     # then open http://localhost:8000
+python3 serve.py 8000     # then open http://localhost:8000
 ```
 
 `build.py` fails loudly on an unresolved `{{IMG:...}}` placeholder or a local link

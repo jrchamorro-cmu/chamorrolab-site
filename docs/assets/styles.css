@@ -154,3 +154,11 @@ p{margin:0 0 13px}
 /* footer */
 footer{border-top:2px solid var(--rule-strong)}
 footer .wrap{padding:20px 22px 40px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+
+/* research: text beside the growth clip */
+.rmedia{display:grid;grid-template-columns:1fr 260px;gap:40px;align-items:start}
+.rmedia h3{margin-top:0}
+.growth{margin:6px 0 0}
+.growth video{width:100%;display:block;background:#000}
+.growth figcaption{font-size:13px;color:var(--muted);padding-top:8px}
+@media (max-width:700px){.rmedia{grid-template-columns:1fr}.growth{max-width:320px}}
