@@ -5,7 +5,8 @@ until the DNS ticket is filed, so all of this can be worked through at leisure.
 
 ## Photos
 
-- [ ] New group photo. Replaces `assets/img/grouppic.jpg`. Keep the same filename and
+- [x] New group photo. Replaced 2026-09-10 with Matt Todd's September 2026 shot from
+      `OneDrive/Work/CMU/Website/LabPhotos/group-sept2026.jpeg`, 1600px wide. Keep the same filename and
       the home page picks it up with no code change. Landscape, roughly 1600px wide.
 - [ ] Updated lab photos. `assets/img/labphoto1.jpg` (captioned "Synthesis space, Wean
       Hall 3314") and `labphoto2.jpg` ("Furnaces and preparation benches") are the two
