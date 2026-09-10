@@ -138,6 +138,10 @@ def build():
     (OUT / "assets").mkdir(parents=True)
 
     layout = (SRC / "layout.html").read_text()
+    # cache-bust the stylesheet so browsers pick up CSS changes at once
+    import hashlib
+    css_hash = hashlib.sha1((SRC / "styles.css").read_bytes()).hexdigest()[:8]
+    layout = layout.replace('href="assets/styles.css"', f'href="assets/styles.css?v={css_hash}"')
     year = date.today().year
 
     # assets: stylesheet, images, anything else dropped in assets/
@@ -201,7 +205,7 @@ def build():
         for leftover in re.findall(r"\{\{[^}]+\}\}", text):
             errors.append(f"{f.name}: unresolved placeholder {leftover}")
         for href in re.findall(r'(?:href|src)="(?!https?:|mailto:|#)([^"]+)"', text):
-            if not (OUT / href).exists():
+            if not (OUT / href.split("?")[0]).exists():
                 errors.append(f"{f.name}: broken local link {href}")
 
     if errors:
