@@ -65,8 +65,10 @@ p{margin:0 0 13px}
 .figure figcaption{font-size:13px;color:var(--muted);padding-top:8px}
 .figure.hero{margin:30px auto 26px;width:85%}
 .figure.hero img{width:100%;display:block}
-.sponsors{display:flex;align-items:center;gap:38px;flex-wrap:wrap;background:#FFFFFF;border:1px solid var(--rule);padding:20px 26px}
+.sponsors{display:flex;align-items:center;justify-content:center;gap:90px;flex-wrap:wrap;background:#FFFFFF;border:1px solid var(--rule);padding:34px 26px}
 .sponsors img{display:block}
+.sponsor{margin:0;text-align:center}
+.sponsor figcaption{font-size:15px;color:var(--muted);padding-top:10px}
 .newsrow{display:grid;grid-template-columns:140px 1fr;gap:20px;padding:10px 0;border-bottom:1px solid var(--rule)}
 .newsrow:last-child{border-bottom:0}
 .newsrow .d{font-size:12.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding-top:2px}
