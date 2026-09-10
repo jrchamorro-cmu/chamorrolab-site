@@ -44,7 +44,8 @@ nav a:hover{text-decoration:underline;text-underline-offset:4px}
 nav a.active{border-bottom:2px solid var(--accent);font-weight:700}
 
 /* structure */
-main{padding:58px 0 70px;min-height:55vh}
+main{min-height:55vh}
+main.wrap{padding-bottom:70px}
 .page{display:none}
 .page.visible{display:block}
 h2{font-size:24px;font-weight:700;letter-spacing:-0.01em;margin:0 0 14px}
