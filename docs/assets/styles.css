@@ -84,18 +84,18 @@ p{margin:0 0 13px}
 .rarea p{margin-bottom:10px}
 
 /* people */
-.prow{display:grid;grid-template-columns:180px 1fr;gap:28px;padding:20px 0;border-bottom:1px solid var(--rule)}
+.prow{display:grid;grid-template-columns:200px 1fr;gap:30px;padding:20px 0;border-bottom:1px solid var(--rule)}
 .prow:last-child{border-bottom:0}
-.prow .photo{width:180px;height:180px;object-fit:cover}
+.prow .photo{width:200px;height:200px;object-fit:cover}
 .mono{
-  width:180px;height:180px;background:var(--tint);border:1px solid var(--rule);
+  width:200px;height:200px;background:var(--tint);border:1px solid var(--rule);
   display:flex;align-items:center;justify-content:center;
   font-size:40px;font-weight:700;color:var(--muted);letter-spacing:.05em;
 }
 .prow .meta{font-size:13.5px;color:var(--muted);margin:1px 0 8px}
 .prow .bio{font-size:15px;margin:0}
-.prow.compact{grid-template-columns:140px 1fr}
-.prow.compact .photo,.prow.compact .mono{width:140px;height:140px;font-size:30px}
+.prow.compact{grid-template-columns:160px 1fr}
+.prow.compact .photo,.prow.compact .mono{width:160px;height:160px;font-size:32px}
 @media (max-width:560px){.prow,.prow.compact{grid-template-columns:110px 1fr;gap:16px}.prow .photo,.prow .mono,.prow.compact .photo,.prow.compact .mono{width:110px;height:110px;font-size:26px}}
 .alumlist{margin:0;padding-left:18px}
 .alumlist li{padding:2px 0}

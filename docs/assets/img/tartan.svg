@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Photograph pending">
+  <defs>
+    <g id="warp">
+      <rect x="0"   y="0" width="26" height="120" fill="#0F6B33"/>
+      <rect x="26"  y="0" width="4"  height="120" fill="#0B1B2E"/>
+      <rect x="30"  y="0" width="14" height="120" fill="#132B45"/>
+      <rect x="44"  y="0" width="3"  height="120" fill="#C50E1F"/>
+      <rect x="47"  y="0" width="3"  height="120" fill="#132B45"/>
+      <rect x="50"  y="0" width="20" height="120" fill="#0F6B33"/>
+      <rect x="70"  y="0" width="4"  height="120" fill="#0B1B2E"/>
+      <rect x="74"  y="0" width="16" height="120" fill="#132B45"/>
+      <rect x="90"  y="0" width="2"  height="120" fill="#0F8C93"/>
+      <rect x="92"  y="0" width="6"  height="120" fill="#132B45"/>
+      <rect x="98"  y="0" width="5"  height="120" fill="#C50E1F"/>
+      <rect x="103" y="0" width="17" height="120" fill="#132B45"/>
+    </g>
+  </defs>
+  <use href="#warp"/>
+  <g opacity="0.55" transform="rotate(90 60 60)"><use href="#warp"/></g>
+  <g opacity="0.10">
+    <path d="M-120 120 L120 -120 M-108 120 L120 -108 M-96 120 L120 -96 M-84 120 L120 -84 M-72 120 L120 -72 M-60 120 L120 -60 M-48 120 L120 -48 M-36 120 L120 -36 M-24 120 L120 -24 M-12 120 L120 -12 M0 120 L120 0 M12 120 L120 12 M24 120 L120 24 M36 120 L120 36 M48 120 L120 48 M60 120 L120 60 M72 120 L120 72 M84 120 L120 84 M96 120 L120 96 M108 120 L120 108" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+  </g>
+</svg>
