@@ -119,7 +119,7 @@ p{margin:0 0 13px}
 #pg-people2 .pi h3{font-size:22px;margin:0 0 6px}
 #pg-people2 .pi .bio{font-size:15px;margin-top:12px}
 
-#pg-people2 .pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:34px 26px}
+#pg-people2 .pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:34px 30px}
 #pg-people2 .pcard{margin:0}
 #pg-people2 .pcard figcaption{border-top:2px solid var(--rule-strong);padding-top:9px;margin-top:10px}
 
@@ -130,13 +130,13 @@ p{margin:0 0 13px}
 #pg-people2 .pnote p{margin:0;max-width:70ch}
 #pg-people2 .pnote b{color:var(--ink)}
 
-@media (max-width:980px){#pg-people2 .pgrid{grid-template-columns:repeat(3,1fr)}}
 @media (max-width:700px){
   #pg-people2 .pgrid{grid-template-columns:repeat(2,1fr);gap:28px 20px}
   #pg-people2 .pi{grid-template-columns:180px 1fr;gap:22px}
   #pg-people2 .alum2{columns:1}
 }
 @media (max-width:460px){
+  #pg-people2 .pgrid{grid-template-columns:1fr;max-width:320px}
   #pg-people2 .pi{grid-template-columns:1fr}
   #pg-people2 .pi .portrait{max-width:220px}
 }
