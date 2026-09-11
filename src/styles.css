@@ -112,6 +112,7 @@ p{margin:0 0 13px}
 #pg-people .iconrow .scholar{color:#4285F4}
 #pg-people .iconrow .linkedin{color:#0A66C2}
 #pg-people .iconrow .orcid{color:#A6CE39}
+#pg-people .iconrow .cv{color:var(--link);font-size:12.5px;font-weight:700;letter-spacing:.06em;align-items:center;text-decoration:none;border:1.5px solid currentColor;border-radius:2px;padding:0 5px;line-height:18px}
 #pg-people .mail{font-size:13px;margin-top:3px;word-break:break-all}
 #pg-people .bio{font-size:14.5px;line-height:1.6;margin:9px 0 0}
 
