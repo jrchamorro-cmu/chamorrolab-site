@@ -13,8 +13,9 @@ until the DNS ticket is filed, so all of this can be worked through at leisure.
       shown on the Facilities page. `labphoto3` and `labphoto4` are in the repo but
       unused. Captions are in `src/pages/facilities.html`.
 - [x] Photo for Dhiya Srikanth. Added 2026-09-10. Placeholder convention for anyone
-      without a photo is now the tartan swatch, `assets/img/tartan.svg`; Megan Yeager
-      uses it. Old note for reference:
+      without a photo is now the tartan swatch, `assets/img/tartan.svg`. Megan Yeager's
+      photo added 2026-09-11 (`meganyeager-45.jpg`, cropped from the selfie she sent, the
+      second person cropped out). Old note for reference:
   - [ ] (was) monogram placeholder in
       `src/pages/people.html`. Add `assets/img/dhiyasrikanth.jpg` and swap the
       `<div class="mono">` for an `<img class="photo">` like the other students.
