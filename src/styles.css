@@ -105,6 +105,9 @@ p{margin:0 0 13px}
 #pg-people .contact{font-size:13.5px;color:var(--muted);margin-top:10px}
 #pg-people .namerow{display:flex;align-items:center;justify-content:space-between;gap:20px}
 #pg-people .namerow h3{margin:0}
+#pg-people .nameleft{display:flex;align-items:center;gap:12px}
+#pg-people .cvchip{color:var(--link);font-size:12.5px;font-weight:700;letter-spacing:.06em;text-decoration:none;border:1.5px solid currentColor;border-radius:2px;padding:1px 6px;line-height:1.35}
+#pg-people .cvchip:hover{background:var(--link);color:#fff}
 #pg-people .iconrow{display:flex;gap:14px;flex:none}
 #pg-people .iconrow .ic{display:inline-flex;text-decoration:none}
 #pg-people .iconrow .ic:hover{opacity:.75}
@@ -112,7 +115,6 @@ p{margin:0 0 13px}
 #pg-people .iconrow .scholar{color:#4285F4}
 #pg-people .iconrow .linkedin{color:#0A66C2}
 #pg-people .iconrow .orcid{color:#A6CE39}
-#pg-people .iconrow .cv{color:var(--link);font-size:12.5px;font-weight:700;letter-spacing:.06em;align-items:center;text-decoration:none;border:1.5px solid currentColor;border-radius:2px;padding:0 5px;line-height:18px}
 #pg-people .mail{font-size:13px;margin-top:3px;word-break:break-all}
 #pg-people .bio{font-size:14.5px;line-height:1.6;margin:9px 0 0}
 

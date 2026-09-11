@@ -1,309 +1,302 @@
 {
-  "highlight_author": "J. R. Chamorro",
-  "preprints": [
-    {
-      "t": "Rashba spin-splitting induced topological Hall effect in a Dirac semimetal&ndash;ferromagnetic semiconductor heterostructure",
-      "a": "S. Islam, E. Steinebronn, K. Yang, B. Neupane, J. R. Chamorro, S. Ghosh, K. A. Mkhoyan, T. M. McQueen, Y. Wang, C. Liu, and N. Samarth",
-      "v": "",
-      "d": "(2024)",
-      "u": "https://doi.org/10.48550/arXiv.2403.18485"
-    },
-    {
-      "t": "Anomalous Residual Surface Conductivity in a Superconductor with Strong Spin-Orbit Coupling",
-      "a": "J. R. Chamorro, P. Chauhan, C. Sun, N. Varnava, M. J. Winiarski, N. Ng, H. K. Vivanco, L. A. Pressley, C. M. Pasco, D. Vanderbilt, Yi Li, N. P. Armitage, and T. M. McQueen",
-      "v": "",
-      "d": "(2022)",
-      "u": "https://arxiv.org/abs/2112.10840"
-    }
-  ],
-  "publications": [
-    {
-      "y": 2026,
-      "t": "Interleaved bond frustration in a triangular lattice antiferromagnet",
-      "a": "S. J. G. Alvarado, J. R. Chamorro, D. Rout, J. Hielscher, S. Schwarz, C. Benyacko, M. B. Stone, V. O. Garlea, A. R. Jackson, G. Pokharel, R. Gomez, B. R. Ortiz, S. Sarker, L. Kautzsch, L. C. Gallington, R. Seshadri, and S. D. Wilson",
-      "v": "Nat. Mater.",
-      "d": "25 (2026) 65&ndash;72",
-      "u": "https://doi.org/10.1038/s41563-025-02380-x"
-    },
-    {
-      "y": 2025,
-      "t": "Strong, yet split hydrogen bonding with ice rules in delafossite (H/D)RhO<sub>2</sub>",
-      "a": "M. A. Wright, A. S. Mulligan, D. Rout, J. G. Hu, J. Liu, R. L. Behrens, J. R. Chamorro, S. D. Wilson, A. K. Cheetham, and R. Seshadri",
-      "v": "Angew. Chem. Int. Ed.",
-      "d": "64 (2025) e15471",
-      "u": "https://doi.org/10.1002/anie.202515471"
-    },
-    {
-      "y": 2025,
-      "t": "Hidden frustration in the triangular-lattice antiferromagnet NdCd<sub>3</sub>P<sub>3</sub>",
-      "a": "J. R. Chamorro, S. J. G. Alvarado, D. Rout, S. Schwarz, A. Scheie, G. Pokharel, A. I. Kolesnikov, L. Keller, and S. D. Wilson",
-      "v": "Phys. Rev. Mater.",
-      "d": "9 (2025) 104414",
-      "u": "https://doi.org/10.1103/2dcv-nkz7"
-    },
-    {
-      "y": 2025,
-      "t": "Type I and type II superconductivity in a quasi-2D Dirac metal",
-      "a": "C. J. Lygouras, J. Zhang, J. Gautreau, M. Pula, S. Sharma, S. Gao, T. Berry, T. Halloran, P. Orban, G. Grissonnanche, J. R. Chamorro, T. Mikuri, D. K. Bhoi, M. A. Siegler, K. J. T. Livi, Y. Uwatoko, S. Nakatsuji, B. J. Ramshaw, Y. Li, G. M. Luke, C. L. Broholm, and T. M. McQueen",
-      "v": "Mater. Adv.",
-      "d": "6 (2025) 1685&ndash;1694",
-      "u": "https://doi.org/10.1039/D5MA00022J"
-    },
-    {
-      "y": 2025,
-      "t": "Stability Frontiers in the AM<sub>6</sub>X<sub>6</sub> Kagome Metals: The LnNb<sub>6</sub>Sn<sub>6</sub> (Ln: Ce&ndash;Lu, Y) Family and Density-Wave Transition in LuNb<sub>6</sub>Sn<sub>6</sub>",
-      "a": "B. R. Ortiz, W. R. Meier, G. Pokharel, J. R. Chamorro, F. Yang, S. Mozaffari, A. Thaler, S. J. G. Alvarado, H. Zhang, D. S. Parker, G. D. Samolyuk, J. A. M. Paddison, J. Yan, F. Ye, S. Sarker, S. D. Wilson, H. Miao, D. Mandrus, and M. A. McGuire",
-      "v": "J. Am. Chem. Soc.",
-      "d": "147 (2025) 5279&ndash;5292",
-      "u": "http://doi.org/10.1021/jacs.4c16347"
-    },
-    {
-      "y": 2024,
-      "t": "Anomalous electronic energy relaxation and soft phonons in the Dirac semimetal Cd<sub>3</sub>As<sub>2</sub>",
-      "a": "R. Bhandia, D. Barbalas, R. Xiao, J. R. Chamorro, T. Berry, T. M. McQueen, N. Samarth, and N. P. Armitage",
-      "v": "Phys. Rev. B",
-      "d": "110 (2024) 075131",
-      "u": "https://doi.org/10.1103/PhysRevB.110.075131"
-    },
-    {
-      "y": 2024,
-      "t": "Soft-Chemical Synthesis, Structure Evolution, and Insulator-to-Metal Transition in Pyrochlore-like λ-RhO<sub>2</sub>",
-      "a": "J. R. Chamorro, J. L. Zuo, E. N. Bassey, A. K. Watkins, G. Zhu, A. Zohar, K. E. Wyckoff, T. L. Kinnibrugh, S. H. Lapidus, S. Stemmer, J. C. Peters, R. J. Clément, S. D. Wilson, and R. Seshadri",
-      "v": "Chem. Mater.",
-      "d": "36 (2024) 1547&ndash;1558",
-      "u": "https://doi.org/10.1021/acs.chemmater.3c02814"
-    },
-    {
-      "y": 2024,
-      "t": "Superconductivity&ndash;Electron Count Relationship in Heusler Phases &mdash; the Case of LiPd<sub>2</sub>Si",
-      "a": "K. Górnicka, X. Gui, J. R. Chamorro, T. M. McQueen, R. J. Cava, T. Klimczuk, and M. J. Winiarski",
-      "v": "Chem. Mater.",
-      "d": "36 (2024) 1870&ndash;1879",
-      "u": "https://doi.org/10.1021/acs.chemmater.3c02398"
-    },
-    {
-      "y": 2023,
-      "t": "Constraints on proximity-induced ferromagnetism in a Dirac semimetal (Cd<sub>3</sub>As<sub>2</sub>)/ferromagnetic semiconductor (Ga<sub>1&minus;x</sub>Mn<sub>x</sub>Sb) heterostructure",
-      "a": "A. Mitra, R. Xiao, W. Yanez, Y. Ou, J. R. Chamorro, T. M. McQueen, A. J. Gutter, J. A. Borchers, M. R. Fitzsimmons, T. R. Charlton, and N. Samarth",
-      "v": "Phys. Rev. Mater.",
-      "d": "7 (2023) 094201",
-      "u": "https://doi.org/10.1103/PhysRevMaterials.7.094201"
-    },
-    {
-      "y": 2023,
-      "t": "Magnetic order in the S<sub>eff</sub> = 1/2 triangular-lattice compound NdCd<sub>3</sub>P<sub>3</sub>",
-      "a": "J. R. Chamorro, A. R. Jackson, A. K. Watkins, R. Seshadri, and S. D. Wilson",
-      "v": "Phys. Rev. Mater.",
-      "d": "7 (2023) 094402",
-      "u": "https://doi.org/10.1103/PhysRevMaterials.7.094402"
-    },
-    {
-      "y": 2023,
-      "t": "Influence of Magnetic and Electric Fields on Universal Conductance Fluctuations in Thin Films of the Dirac Semimetal Cd<sub>3</sub>As<sub>2</sub>",
-      "a": "R. Xiao, S. Islam, W. Yanez, Y. Ou, H. Liu, X. Xie, J. R. Chamorro, T. M. McQueen, and N. Samarth",
-      "v": "Nano Lett.",
-      "d": "23 (2023) 5634&ndash;5640",
-      "u": "https://doi.org/10.1021/acs.nanolett.3c01174"
-    },
-    {
-      "y": 2022,
-      "t": "Vacancy-Driven Disorder and Elevated Dielectric Response in the Pyrochlore Pb<sub>1.5</sub>Nb<sub>2</sub>O<sub>6.5</sub>",
-      "a": "U. Dang, J. O&rsquo;Hara, H. A. Evans, D. Olds, J. R. Chamorro, D. Hickox-Young, G. Laurita, and R. T. Macaluso",
-      "v": "Inorg. Chem.",
-      "d": "61 (2022) 18601&ndash;18610",
-      "u": "https://doi.org/10.1021/acs.inorgchem.2c03031"
-    },
-    {
-      "y": 2022,
-      "t": "Highly anisotropic magnetism in the vanadium-based kagome metal TbV<sub>6</sub>Sn<sub>6</sub>",
-      "a": "G. Pokharel, B. R. Ortiz, J. R. Chamorro, P. M. Sarte, L. Kautzsch, G. Wu, J. P. C. Ruff, and S. D. Wilson",
-      "v": "Phys. Rev. Mater.",
-      "d": "6 (2022) 104202",
-      "u": "https://doi.org/10.1103/PhysRevMaterials.6.104202"
-    },
-    {
-      "y": 2022,
-      "t": "Electronic ground state of two nonmagnetic pentavalent honeycomb iridates",
-      "a": "A. de la Torre, B. Zager, J. R. Chamorro, M. H. Upton, G. Fabbris, D. Haskel, D. Casa, T. M. McQueen, and K. W. Plumb",
-      "v": "Phys. Rev. Mater.",
-      "d": "6 (2022) 084406",
-      "u": "https://doi.org/10.1103/PhysRevMaterials.6.084406"
-    },
-    {
-      "y": 2022,
-      "t": "Optimization of PbTiO<sub>3</sub> Single Crystals with Flux and Laser Floating Zone Method",
-      "a": "L. A. Pressley, M. Sinha, H. K. Vivanco, J. R. Chamorro, S. Das, R. Ramesh, and T. M. McQueen",
-      "v": "Cryst. Growth Des.",
-      "d": "22 (2022) 5629&ndash;5638",
-      "u": "https://doi.org/10.1021/acs.cgd.2c00716"
-    },
-    {
-      "y": 2022,
-      "t": "Electronic structure of the frustrated diamond lattice magnet NiRh<sub>2</sub>O<sub>4</sub>",
-      "a": "B. Zager, J. R. Chamorro, L. Ge, F. Bahrami, V. Bisogni, J. Pelliciari, J. Li, G. Fabbris, T. M. McQueen, M. Mourigal, and K. W. Plumb",
-      "v": "Phys. Rev. B",
-      "d": "106 (2022) 045134",
-      "u": "https://doi.org/10.1103/PhysRevB.106.045134"
-    },
-    {
-      "y": 2022,
-      "t": "Integer quantum Hall effect and enhanced g factor in quantum-confined Cd<sub>3</sub>As<sub>2</sub> films",
-      "a": "R. Xiao, J. Zhang, J. R. Chamorro, J. Kim, T. M. McQueen, D. Vanderbilt, M. Kayyalha, Yi Li, and N. Samarth",
-      "v": "Phys. Rev. B",
-      "d": "106 (2022) L201101",
-      "u": "https://doi.org/10.1103/PhysRevB.106.L201101"
-    },
-    {
-      "y": 2021,
-      "t": "Spin and charge interconversion in Dirac semimetal thin films",
-      "a": "W. Yanez, Y. Ou, R. Xiao, J. Koo, J. T. Held, S. Ghosh, J. Rable, T. Pillsbury, E. Gonzalez Delgado, K. Yang, J. R. Chamorro, A. J. Grutter, P. Quarterman, A. Richardella, A. Sengupta, T. M. McQueen, J. A. Borchers, K. A. Mkhoyan, B. Yan, and N. Samarth",
-      "v": "Phys. Rev. Appl.",
-      "d": "16 (2021) 054031",
-      "u": "https://doi.org/10.1103/PhysRevApplied.16.054031"
-    },
-    {
-      "y": 2021,
-      "t": "Enhanced hybridization in the electronic ground state of the intercalated honeycomb iridate Ag<sub>3</sub>LiIr<sub>2</sub>O<sub>6</sub>",
-      "a": "A. de la Torre, B. Zager, F. Bahrami, M. DiScala, J. R. Chamorro, M. H. Upton, G. Fabbris, D. Haskel, D. Casa, T. M. McQueen, F. Tafti, and K. W. Plumb",
-      "v": "Phys. Rev. B",
-      "d": "104 (2021) L100416",
-      "u": "https://doi.org/10.1103/PhysRevB.104.L100416"
-    },
-    {
-      "y": 2021,
-      "t": "Integer versus half-integer spin on an approximate honeycomb lattice",
-      "a": "V. J. Stewart, J. R. Chamorro, and T. M. McQueen",
-      "v": "Phys. Rev. Mater.",
-      "d": "5 (2021) 094401",
-      "u": "https://doi.org/10.1103/PhysRevMaterials.5.094401"
-    },
-    {
-      "y": 2021,
-      "t": "Topological nature of the Kondo insulator SmB<sub>6</sub> and its sensitiveness to Sm vacancy",
-      "a": "W. K. Park, J. A. Sittler, L. H. Greene, W. T. Fuhrman, J. R. Chamorro, S. M. Koohpayeh, W. A. Phelan, and T. M. McQueen",
-      "v": "Phys. Rev. B",
-      "d": "103 (2021) 155125",
-      "u": "https://doi.org/10.1103/PhysRevB.103.155125"
-    },
-    {
-      "y": 2021,
-      "t": "Bulk transport paths through defects in floating zone and Al flux grown SmB<sub>6</sub>",
-      "a": "Y.-S. Eo, A. Rakoski, S. Sinha, D. Mihaliov, W. T. Fuhrman, S. R. Saha, P. F. S. Rosa, Z. Fisk, C. Hatnean, G. Balakrishnan, J. R. Chamorro, S. M. Koohpayeh, T. M. McQueen, B. Kang, M.-S. Song, B. Cho, M. S. Fuhrer, J. P. Paglione, and C. Kurdak",
-      "v": "Phys. Rev. Mater.",
-      "d": "5 (2021) 055001",
-      "u": "https://doi.org/10.1103/PhysRevMaterials.5.055001"
-    },
-    {
-      "y": 2021,
-      "t": "Chemistry of Quantum Spin Liquids",
-      "a": "J. R. Chamorro, T. M. McQueen, and T. T. Tran",
-      "v": "Chem. Rev.",
-      "d": "121 (2021) 2898&ndash;2934",
-      "u": "https://doi.org/10.1021/acs.chemrev.0c00641"
-    },
-    {
-      "y": 2020,
-      "t": "RuAl<sub>6</sub> &mdash; An Endohedral Aluminide Superconductor",
-      "a": "Z. Ryzynska, J. R. Chamorro, T. M. McQueen, P. Wisniewski, D. Kaczorowski, W. Xie, R. J. Cava, T. Klimczuk, and M. J. Winiarski",
-      "v": "Chem. Mater.",
-      "d": "32 (2020) 3805&ndash;3812",
-      "u": "https://doi.org/10.1021/acs.chemmater.9b05277"
-    },
-    {
-      "y": 2020,
-      "t": "Dynamical Bonding Driving Mixed Valency in a Metal Boride",
-      "a": "P. J. Robinson, M. E. Valentine, A. Granmoe, N. Drichko, J. R. Chamorro, P. F. Rosa, T. M. McQueen, and A. N. Alexandrova",
-      "v": "Angew. Chem. Int. Ed.",
-      "d": "59 (2020) 10996&ndash;11002",
-      "u": "https://doi.org/10.1002/anie.202000945"
-    },
-    {
-      "y": 2019,
-      "t": "Dirac Fermions and Possible Weak Antilocalization in LaCuSb<sub>2</sub>",
-      "a": "J. R. Chamorro, A. Topp, Y. Fang, M. J. Winiarski, C. R. Ast, M. Krivenkov, A. Varykhalov, B. J. Ramshaw, L. M. Schoop, and T. M. McQueen",
-      "v": "APL Mater.",
-      "d": "7 (2019) 121108",
-      "u": "https://doi.org/10.1063/1.5124685"
-    },
-    {
-      "y": 2019,
-      "t": "(CsX)Cu<sub>5</sub>O<sub>2</sub>(PO<sub>4</sub>)<sub>2</sub> (X = Cl, Br, I) &mdash; a family of Cu<sup>2+</sup> S = 1/2 compounds with capped-kagome networks composed of OCu<sub>4</sub> units",
-      "a": "M. J. Winiarski, T. T. Tran, J. R. Chamorro, and T. M. McQueen",
-      "v": "Inorg. Chem.",
-      "d": "58 (2019) 4328&ndash;4336",
-      "u": "https://doi.org/10.1021/acs.inorgchem.8b03464"
-    },
-    {
-      "y": 2018,
-      "t": "Universal Single Ion Physics in Spin-Orbit Coupled d<sup>5</sup> and d<sup>4</sup> ions",
-      "a": "H. Lu, J. R. Chamorro, C. Wan, and T. M. McQueen",
-      "v": "Inorg. Chem.",
-      "d": "57 (2018) 14443&ndash;14449",
-      "u": "https://doi.org/10.1021/acs.inorgchem.8b02718"
-    },
-    {
-      "y": 2018,
-      "t": "Progress Toward Solid State Synthesis by Design",
-      "a": "J. R. Chamorro and T. M. McQueen",
-      "v": "Acc. Chem. Res.",
-      "d": "51 (2018) 2918&ndash;2925",
-      "u": "https://doi.org/10.1021/acs.accounts.8b00382"
-    },
-    {
-      "y": 2018,
-      "t": "Field-dependent heat transport in the Kondo insulator SmB<sub>6</sub>: phonons scattered by magnetic impurities",
-      "a": "M.-E. Boulanger, F. Lalibérté, M. Dion, S. Badoux, N. Doiron-Leyraud, W. A. Phelan, S. M. Koohpayeh, W. T. Fuhrman, J. R. Chamorro, T. M. McQueen, X. Wang, Y. Nakajima, T. Metz, J. Paglione, and L. Taillefer",
-      "v": "Phys. Rev. B",
-      "d": "97 (2018) 245141",
-      "u": "https://doi.org/10.1103/PhysRevB.97.245141"
-    },
-    {
-      "y": 2018,
-      "t": "Screened moments and extrinsic in-gap states in samarium hexaboride",
-      "a": "W. T. Fuhrman, J. R. Chamorro, P. A. Alekseev, J.-M. Mignot, T. Keller, P. Nikolić, T. M. McQueen, and C. L. Broholm",
-      "v": "Nat. Commun.",
-      "d": "9 (2018) 1539",
-      "u": "https://doi.org/10.1038/s41467-018-04007-z"
-    },
-    {
-      "y": 2018,
-      "t": "Frustrated spin one on a diamond lattice in NiRh<sub>2</sub>O<sub>4</sub>",
-      "a": "J. R. Chamorro, L. Ge, J. Flynn, M. Subramanian, M. Mourigal, and T. M. McQueen",
-      "v": "Phys. Rev. Mater.",
-      "d": "2 (2018) 034404",
-      "u": "https://doi.org/10.1103/PhysRevMaterials.2.034404"
-    },
-    {
-      "y": 2017,
-      "t": "Mystery of Three Borides: Differential Metal&ndash;Boron Bonding Governing Superhard Structures",
-      "a": "P. J. Robinson, G. Liu, S. Ciborowski, C. Martinez-Martinez, J. R. Chamorro, X. Zhang, T. M. McQueen, K. H. Bowen, and A. N. Alexandrova",
-      "v": "Chem. Mater.",
-      "d": "29 (2017) 9892&ndash;9896",
-      "u": "https://doi.org/10.1021/acs.chemmater.7b04378"
-    },
-    {
-      "y": 2017,
-      "t": "Designing Indirect-Direct Bandgap Transitions in Double Perovskites",
-      "a": "T. T. Tran, J. R. Panella, J. R. Chamorro, J. R. Morey, and T. M. McQueen",
-      "v": "Mater. Horiz.",
-      "d": "4 (2017) 688&ndash;693",
-      "u": "https://doi.org/10.1039/C7MH00239D"
-    },
-    {
-      "y": 2016,
-      "t": "Synthesis and Structure of Three New Oxychalcogenides: A<sub>2</sub>O<sub>2</sub>Bi<sub>2</sub>Se<sub>3</sub> (A = Sr, Ba) and Sr<sub>2</sub>O<sub>2</sub>Sb<sub>2</sub>Se<sub>3</sub>",
-      "a": "J. Panella, J. R. Chamorro, and T. M. McQueen",
-      "v": "Chem. Mater.",
-      "d": "28 (2016) 890&ndash;895",
-      "u": "https://doi.org/10.1021/acs.chemmater.5b04536"
-    },
-    {
-      "y": 2015,
-      "t": "Opposites Attract: Organic Charge Transfer Salts",
-      "a": "H. van de Wouw, J. R. Chamorro, M. Quintero, and R. S. Klausen",
-      "v": "J. Chem. Educ.",
-      "d": "92 (2015) 2134&ndash;2139",
-      "u": "https://doi.org/10.1021/acs.jchemed.5b00340"
-    }
-  ]
+ "highlight_author": "J. R. Chamorro",
+ "preprints": [
+  {
+   "t": "Efficiently gate-tunable ferromagnetism in ferromagnetic semiconductor-Dirac semimetal p-n heterojunctions",
+   "a": "E. Steinebronn, S. Islam, A. Chatterjee, B. Neupane, A. Grutter, C. Jensen, J. A. Borchers, T. Charlton, W. J. Yánez-Parreño, J. R. Chamorro, T. Berry, S. Ghosh, K. Yang, K. A. Nivedith, K. A. Mkhoyan, T. M. McQueen, Y. Wang, C. Liu, and N. Samarth",
+   "v": "",
+   "d": "submitted (2026)",
+   "u": "https://arxiv.org/abs/2603.05770"
+  }
+ ],
+ "publications": [
+  {
+   "y": 2026,
+   "t": "Interleaved bond frustration in a triangular lattice antiferromagnet",
+   "a": "S. J. G. Alvarado, J. R. Chamorro, D. Rout, J. Hielscher, S. Schwarz, C. Benyacko, M. B. Stone, V. O. Garlea, A. R. Jackson, G. Pokharel, R. Gomez, B. R. Ortiz, S. Sarker, L. Kautzsch, L. C. Gallington, R. Seshadri, and S. D. Wilson",
+   "v": "Nat. Mater.",
+   "d": "25 (2026) 65&ndash;72",
+   "u": "https://doi.org/10.1038/s41563-025-02380-x"
+  },
+  {
+   "y": 2025,
+   "t": "Strong, yet split hydrogen bonding with ice rules in delafossite (H/D)RhO<sub>2</sub>",
+   "a": "M. A. Wright, A. S. Mulligan, D. Rout, J. G. Hu, J. Liu, R. L. Behrens, J. R. Chamorro, S. D. Wilson, A. K. Cheetham, and R. Seshadri",
+   "v": "Angew. Chem. Int. Ed.",
+   "d": "64 (2025) e15471",
+   "u": "https://doi.org/10.1002/anie.202515471"
+  },
+  {
+   "y": 2025,
+   "t": "Hidden frustration in the triangular-lattice antiferromagnet NdCd<sub>3</sub>P<sub>3</sub>",
+   "a": "J. R. Chamorro, S. J. G. Alvarado, D. Rout, S. Schwarz, A. Scheie, G. Pokharel, A. I. Kolesnikov, L. Keller, and S. D. Wilson",
+   "v": "Phys. Rev. Mater.",
+   "d": "9 (2025) 104414",
+   "u": "https://doi.org/10.1103/2dcv-nkz7"
+  },
+  {
+   "y": 2025,
+   "t": "Type I and type II superconductivity in a quasi-2D Dirac metal",
+   "a": "C. J. Lygouras, J. Zhang, J. Gautreau, M. Pula, S. Sharma, S. Gao, T. Berry, T. Halloran, P. Orban, G. Grissonnanche, J. R. Chamorro, T. Mikuri, D. K. Bhoi, M. A. Siegler, K. J. T. Livi, Y. Uwatoko, S. Nakatsuji, B. J. Ramshaw, Y. Li, G. M. Luke, C. L. Broholm, and T. M. McQueen",
+   "v": "Mater. Adv.",
+   "d": "6 (2025) 1685&ndash;1694",
+   "u": "https://doi.org/10.1039/D5MA00022J"
+  },
+  {
+   "y": 2025,
+   "t": "Stability Frontiers in the AM<sub>6</sub>X<sub>6</sub> Kagome Metals: The LnNb<sub>6</sub>Sn<sub>6</sub> (Ln: Ce&ndash;Lu, Y) Family and Density-Wave Transition in LuNb<sub>6</sub>Sn<sub>6</sub>",
+   "a": "B. R. Ortiz, W. R. Meier, G. Pokharel, J. R. Chamorro, F. Yang, S. Mozaffari, A. Thaler, S. J. G. Alvarado, H. Zhang, D. S. Parker, G. D. Samolyuk, J. A. M. Paddison, J. Yan, F. Ye, S. Sarker, S. D. Wilson, H. Miao, D. Mandrus, and M. A. McGuire",
+   "v": "J. Am. Chem. Soc.",
+   "d": "147 (2025) 5279&ndash;5292",
+   "u": "http://doi.org/10.1021/jacs.4c16347"
+  },
+  {
+   "y": 2024,
+   "t": "Anomalous electronic energy relaxation and soft phonons in the Dirac semimetal Cd<sub>3</sub>As<sub>2</sub>",
+   "a": "R. Bhandia, D. Barbalas, R. Xiao, J. R. Chamorro, T. Berry, T. M. McQueen, N. Samarth, and N. P. Armitage",
+   "v": "Phys. Rev. B",
+   "d": "110 (2024) 075131",
+   "u": "https://doi.org/10.1103/PhysRevB.110.075131"
+  },
+  {
+   "y": 2024,
+   "t": "Soft-Chemical Synthesis, Structure Evolution, and Insulator-to-Metal Transition in Pyrochlore-like λ-RhO<sub>2</sub>",
+   "a": "J. R. Chamorro, J. L. Zuo, E. N. Bassey, A. K. Watkins, G. Zhu, A. Zohar, K. E. Wyckoff, T. L. Kinnibrugh, S. H. Lapidus, S. Stemmer, J. C. Peters, R. J. Clément, S. D. Wilson, and R. Seshadri",
+   "v": "Chem. Mater.",
+   "d": "36 (2024) 1547&ndash;1558",
+   "u": "https://doi.org/10.1021/acs.chemmater.3c02814"
+  },
+  {
+   "y": 2024,
+   "t": "Superconductivity&ndash;Electron Count Relationship in Heusler Phases &mdash; the Case of LiPd<sub>2</sub>Si",
+   "a": "K. Górnicka, X. Gui, J. R. Chamorro, T. M. McQueen, R. J. Cava, T. Klimczuk, and M. J. Winiarski",
+   "v": "Chem. Mater.",
+   "d": "36 (2024) 1870&ndash;1879",
+   "u": "https://doi.org/10.1021/acs.chemmater.3c02398"
+  },
+  {
+   "y": 2023,
+   "t": "Constraints on proximity-induced ferromagnetism in a Dirac semimetal (Cd<sub>3</sub>As<sub>2</sub>)/ferromagnetic semiconductor (Ga<sub>1&minus;x</sub>Mn<sub>x</sub>Sb) heterostructure",
+   "a": "A. Mitra, R. Xiao, W. Yanez, Y. Ou, J. R. Chamorro, T. M. McQueen, A. J. Gutter, J. A. Borchers, M. R. Fitzsimmons, T. R. Charlton, and N. Samarth",
+   "v": "Phys. Rev. Mater.",
+   "d": "7 (2023) 094201",
+   "u": "https://doi.org/10.1103/PhysRevMaterials.7.094201"
+  },
+  {
+   "y": 2023,
+   "t": "Magnetic order in the S<sub>eff</sub> = 1/2 triangular-lattice compound NdCd<sub>3</sub>P<sub>3</sub>",
+   "a": "J. R. Chamorro, A. R. Jackson, A. K. Watkins, R. Seshadri, and S. D. Wilson",
+   "v": "Phys. Rev. Mater.",
+   "d": "7 (2023) 094402",
+   "u": "https://doi.org/10.1103/PhysRevMaterials.7.094402"
+  },
+  {
+   "y": 2023,
+   "t": "Influence of Magnetic and Electric Fields on Universal Conductance Fluctuations in Thin Films of the Dirac Semimetal Cd<sub>3</sub>As<sub>2</sub>",
+   "a": "R. Xiao, S. Islam, W. Yanez, Y. Ou, H. Liu, X. Xie, J. R. Chamorro, T. M. McQueen, and N. Samarth",
+   "v": "Nano Lett.",
+   "d": "23 (2023) 5634&ndash;5640",
+   "u": "https://doi.org/10.1021/acs.nanolett.3c01174"
+  },
+  {
+   "y": 2022,
+   "t": "Vacancy-Driven Disorder and Elevated Dielectric Response in the Pyrochlore Pb<sub>1.5</sub>Nb<sub>2</sub>O<sub>6.5</sub>",
+   "a": "U. Dang, J. O&rsquo;Hara, H. A. Evans, D. Olds, J. R. Chamorro, D. Hickox-Young, G. Laurita, and R. T. Macaluso",
+   "v": "Inorg. Chem.",
+   "d": "61 (2022) 18601&ndash;18610",
+   "u": "https://doi.org/10.1021/acs.inorgchem.2c03031"
+  },
+  {
+   "y": 2022,
+   "t": "Highly anisotropic magnetism in the vanadium-based kagome metal TbV<sub>6</sub>Sn<sub>6</sub>",
+   "a": "G. Pokharel, B. R. Ortiz, J. R. Chamorro, P. M. Sarte, L. Kautzsch, G. Wu, J. P. C. Ruff, and S. D. Wilson",
+   "v": "Phys. Rev. Mater.",
+   "d": "6 (2022) 104202",
+   "u": "https://doi.org/10.1103/PhysRevMaterials.6.104202"
+  },
+  {
+   "y": 2022,
+   "t": "Electronic ground state of two nonmagnetic pentavalent honeycomb iridates",
+   "a": "A. de la Torre, B. Zager, J. R. Chamorro, M. H. Upton, G. Fabbris, D. Haskel, D. Casa, T. M. McQueen, and K. W. Plumb",
+   "v": "Phys. Rev. Mater.",
+   "d": "6 (2022) 084406",
+   "u": "https://doi.org/10.1103/PhysRevMaterials.6.084406"
+  },
+  {
+   "y": 2022,
+   "t": "Optimization of PbTiO<sub>3</sub> Single Crystals with Flux and Laser Floating Zone Method",
+   "a": "L. A. Pressley, M. Sinha, H. K. Vivanco, J. R. Chamorro, S. Das, R. Ramesh, and T. M. McQueen",
+   "v": "Cryst. Growth Des.",
+   "d": "22 (2022) 5629&ndash;5638",
+   "u": "https://doi.org/10.1021/acs.cgd.2c00716"
+  },
+  {
+   "y": 2022,
+   "t": "Electronic structure of the frustrated diamond lattice magnet NiRh<sub>2</sub>O<sub>4</sub>",
+   "a": "B. Zager, J. R. Chamorro, L. Ge, F. Bahrami, V. Bisogni, J. Pelliciari, J. Li, G. Fabbris, T. M. McQueen, M. Mourigal, and K. W. Plumb",
+   "v": "Phys. Rev. B",
+   "d": "106 (2022) 045134",
+   "u": "https://doi.org/10.1103/PhysRevB.106.045134"
+  },
+  {
+   "y": 2022,
+   "t": "Integer quantum Hall effect and enhanced g factor in quantum-confined Cd<sub>3</sub>As<sub>2</sub> films",
+   "a": "R. Xiao, J. Zhang, J. R. Chamorro, J. Kim, T. M. McQueen, D. Vanderbilt, M. Kayyalha, Yi Li, and N. Samarth",
+   "v": "Phys. Rev. B",
+   "d": "106 (2022) L201101",
+   "u": "https://doi.org/10.1103/PhysRevB.106.L201101"
+  },
+  {
+   "y": 2021,
+   "t": "Spin and charge interconversion in Dirac semimetal thin films",
+   "a": "W. Yanez, Y. Ou, R. Xiao, J. Koo, J. T. Held, S. Ghosh, J. Rable, T. Pillsbury, E. Gonzalez Delgado, K. Yang, J. R. Chamorro, A. J. Grutter, P. Quarterman, A. Richardella, A. Sengupta, T. M. McQueen, J. A. Borchers, K. A. Mkhoyan, B. Yan, and N. Samarth",
+   "v": "Phys. Rev. Appl.",
+   "d": "16 (2021) 054031",
+   "u": "https://doi.org/10.1103/PhysRevApplied.16.054031"
+  },
+  {
+   "y": 2021,
+   "t": "Enhanced hybridization in the electronic ground state of the intercalated honeycomb iridate Ag<sub>3</sub>LiIr<sub>2</sub>O<sub>6</sub>",
+   "a": "A. de la Torre, B. Zager, F. Bahrami, M. DiScala, J. R. Chamorro, M. H. Upton, G. Fabbris, D. Haskel, D. Casa, T. M. McQueen, F. Tafti, and K. W. Plumb",
+   "v": "Phys. Rev. B",
+   "d": "104 (2021) L100416",
+   "u": "https://doi.org/10.1103/PhysRevB.104.L100416"
+  },
+  {
+   "y": 2021,
+   "t": "Integer versus half-integer spin on an approximate honeycomb lattice",
+   "a": "V. J. Stewart, J. R. Chamorro, and T. M. McQueen",
+   "v": "Phys. Rev. Mater.",
+   "d": "5 (2021) 094401",
+   "u": "https://doi.org/10.1103/PhysRevMaterials.5.094401"
+  },
+  {
+   "y": 2021,
+   "t": "Topological nature of the Kondo insulator SmB<sub>6</sub> and its sensitiveness to Sm vacancy",
+   "a": "W. K. Park, J. A. Sittler, L. H. Greene, W. T. Fuhrman, J. R. Chamorro, S. M. Koohpayeh, W. A. Phelan, and T. M. McQueen",
+   "v": "Phys. Rev. B",
+   "d": "103 (2021) 155125",
+   "u": "https://doi.org/10.1103/PhysRevB.103.155125"
+  },
+  {
+   "y": 2021,
+   "t": "Bulk transport paths through defects in floating zone and Al flux grown SmB<sub>6</sub>",
+   "a": "Y.-S. Eo, A. Rakoski, S. Sinha, D. Mihaliov, W. T. Fuhrman, S. R. Saha, P. F. S. Rosa, Z. Fisk, C. Hatnean, G. Balakrishnan, J. R. Chamorro, S. M. Koohpayeh, T. M. McQueen, B. Kang, M.-S. Song, B. Cho, M. S. Fuhrer, J. P. Paglione, and C. Kurdak",
+   "v": "Phys. Rev. Mater.",
+   "d": "5 (2021) 055001",
+   "u": "https://doi.org/10.1103/PhysRevMaterials.5.055001"
+  },
+  {
+   "y": 2021,
+   "t": "Chemistry of Quantum Spin Liquids",
+   "a": "J. R. Chamorro, T. M. McQueen, and T. T. Tran",
+   "v": "Chem. Rev.",
+   "d": "121 (2021) 2898&ndash;2934",
+   "u": "https://doi.org/10.1021/acs.chemrev.0c00641"
+  },
+  {
+   "y": 2020,
+   "t": "RuAl<sub>6</sub> &mdash; An Endohedral Aluminide Superconductor",
+   "a": "Z. Ryzynska, J. R. Chamorro, T. M. McQueen, P. Wisniewski, D. Kaczorowski, W. Xie, R. J. Cava, T. Klimczuk, and M. J. Winiarski",
+   "v": "Chem. Mater.",
+   "d": "32 (2020) 3805&ndash;3812",
+   "u": "https://doi.org/10.1021/acs.chemmater.9b05277"
+  },
+  {
+   "y": 2020,
+   "t": "Dynamical Bonding Driving Mixed Valency in a Metal Boride",
+   "a": "P. J. Robinson, M. E. Valentine, A. Granmoe, N. Drichko, J. R. Chamorro, P. F. Rosa, T. M. McQueen, and A. N. Alexandrova",
+   "v": "Angew. Chem. Int. Ed.",
+   "d": "59 (2020) 10996&ndash;11002",
+   "u": "https://doi.org/10.1002/anie.202000945"
+  },
+  {
+   "y": 2019,
+   "t": "Dirac Fermions and Possible Weak Antilocalization in LaCuSb<sub>2</sub>",
+   "a": "J. R. Chamorro, A. Topp, Y. Fang, M. J. Winiarski, C. R. Ast, M. Krivenkov, A. Varykhalov, B. J. Ramshaw, L. M. Schoop, and T. M. McQueen",
+   "v": "APL Mater.",
+   "d": "7 (2019) 121108",
+   "u": "https://doi.org/10.1063/1.5124685"
+  },
+  {
+   "y": 2019,
+   "t": "(CsX)Cu<sub>5</sub>O<sub>2</sub>(PO<sub>4</sub>)<sub>2</sub> (X = Cl, Br, I) &mdash; a family of Cu<sup>2+</sup> S = 1/2 compounds with capped-kagome networks composed of OCu<sub>4</sub> units",
+   "a": "M. J. Winiarski, T. T. Tran, J. R. Chamorro, and T. M. McQueen",
+   "v": "Inorg. Chem.",
+   "d": "58 (2019) 4328&ndash;4336",
+   "u": "https://doi.org/10.1021/acs.inorgchem.8b03464"
+  },
+  {
+   "y": 2018,
+   "t": "Universal Single Ion Physics in Spin-Orbit Coupled d<sup>5</sup> and d<sup>4</sup> ions",
+   "a": "H. Lu, J. R. Chamorro, C. Wan, and T. M. McQueen",
+   "v": "Inorg. Chem.",
+   "d": "57 (2018) 14443&ndash;14449",
+   "u": "https://doi.org/10.1021/acs.inorgchem.8b02718"
+  },
+  {
+   "y": 2018,
+   "t": "Progress Toward Solid State Synthesis by Design",
+   "a": "J. R. Chamorro and T. M. McQueen",
+   "v": "Acc. Chem. Res.",
+   "d": "51 (2018) 2918&ndash;2925",
+   "u": "https://doi.org/10.1021/acs.accounts.8b00382"
+  },
+  {
+   "y": 2018,
+   "t": "Field-dependent heat transport in the Kondo insulator SmB<sub>6</sub>: phonons scattered by magnetic impurities",
+   "a": "M.-E. Boulanger, F. Lalibérté, M. Dion, S. Badoux, N. Doiron-Leyraud, W. A. Phelan, S. M. Koohpayeh, W. T. Fuhrman, J. R. Chamorro, T. M. McQueen, X. Wang, Y. Nakajima, T. Metz, J. Paglione, and L. Taillefer",
+   "v": "Phys. Rev. B",
+   "d": "97 (2018) 245141",
+   "u": "https://doi.org/10.1103/PhysRevB.97.245141"
+  },
+  {
+   "y": 2018,
+   "t": "Screened moments and extrinsic in-gap states in samarium hexaboride",
+   "a": "W. T. Fuhrman, J. R. Chamorro, P. A. Alekseev, J.-M. Mignot, T. Keller, P. Nikolić, T. M. McQueen, and C. L. Broholm",
+   "v": "Nat. Commun.",
+   "d": "9 (2018) 1539",
+   "u": "https://doi.org/10.1038/s41467-018-04007-z"
+  },
+  {
+   "y": 2018,
+   "t": "Frustrated spin one on a diamond lattice in NiRh<sub>2</sub>O<sub>4</sub>",
+   "a": "J. R. Chamorro, L. Ge, J. Flynn, M. Subramanian, M. Mourigal, and T. M. McQueen",
+   "v": "Phys. Rev. Mater.",
+   "d": "2 (2018) 034404",
+   "u": "https://doi.org/10.1103/PhysRevMaterials.2.034404"
+  },
+  {
+   "y": 2017,
+   "t": "Mystery of Three Borides: Differential Metal&ndash;Boron Bonding Governing Superhard Structures",
+   "a": "P. J. Robinson, G. Liu, S. Ciborowski, C. Martinez-Martinez, J. R. Chamorro, X. Zhang, T. M. McQueen, K. H. Bowen, and A. N. Alexandrova",
+   "v": "Chem. Mater.",
+   "d": "29 (2017) 9892&ndash;9896",
+   "u": "https://doi.org/10.1021/acs.chemmater.7b04378"
+  },
+  {
+   "y": 2017,
+   "t": "Designing Indirect-Direct Bandgap Transitions in Double Perovskites",
+   "a": "T. T. Tran, J. R. Panella, J. R. Chamorro, J. R. Morey, and T. M. McQueen",
+   "v": "Mater. Horiz.",
+   "d": "4 (2017) 688&ndash;693",
+   "u": "https://doi.org/10.1039/C7MH00239D"
+  },
+  {
+   "y": 2016,
+   "t": "Synthesis and Structure of Three New Oxychalcogenides: A<sub>2</sub>O<sub>2</sub>Bi<sub>2</sub>Se<sub>3</sub> (A = Sr, Ba) and Sr<sub>2</sub>O<sub>2</sub>Sb<sub>2</sub>Se<sub>3</sub>",
+   "a": "J. Panella, J. R. Chamorro, and T. M. McQueen",
+   "v": "Chem. Mater.",
+   "d": "28 (2016) 890&ndash;895",
+   "u": "https://doi.org/10.1021/acs.chemmater.5b04536"
+  },
+  {
+   "y": 2015,
+   "t": "Opposites Attract: Organic Charge Transfer Salts",
+   "a": "H. van de Wouw, J. R. Chamorro, M. Quintero, and R. S. Klausen",
+   "v": "J. Chem. Educ.",
+   "d": "92 (2015) 2134&ndash;2139",
+   "u": "https://doi.org/10.1021/acs.jchemed.5b00340"
+  }
+ ]
 }

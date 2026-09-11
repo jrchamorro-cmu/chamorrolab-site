@@ -96,16 +96,11 @@ def resolve_assets(text, where):
 def render_publications():
     """Render publications.json to static HTML, group members in bold."""
     data = json.loads((SRC / "data/publications.json").read_text())
-    me = data["highlight_author"]
-
-    def bold(authors):
-        return authors.replace(me, f"<b>{me}</b>", 1)
-
-    out = ['<div class="pyear">Preprints</div>']
+    out = ['<div class="pyear">In press or submitted</div>']
     for p in data["preprints"]:
         out.append(
             f'<div class="pub"><span class="t">{p["t"]}</span><br>'
-            f'<span class="a">{bold(p["a"])}</span><br>'
+            f'<span class="a">{p["a"]}</span><br>'
             f'<span class="v">{p["d"]}</span> '
             f'<a class="lk" href="{p["u"]}">[arXiv]</a></div>'
         )
@@ -118,7 +113,7 @@ def render_publications():
         for p in [q for q in data["publications"] if q["y"] == year]:
             out.append(
                 f'<div class="pub"><span class="t">{p["t"]}</span><br>'
-                f'<span class="a">{bold(p["a"])}</span><br>'
+                f'<span class="a">{p["a"]}</span><br>'
                 f'<span class="v"><i>{p["v"]}</i> {p["d"]}</span> '
                 f'<a class="lk" href="{p["u"]}">[DOI]</a></div>'
             )
