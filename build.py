@@ -52,11 +52,6 @@ PAGES = [
          title=f"People — {SITE_NAME}",
          desc="Faculty, graduate students, undergraduate researchers, and alumni of the "
               "Chamorro Research Group at Carnegie Mellon University."),
-    # Layout trial, not public: portrait photographs at 4:5 and a card grid.
-    dict(key="people2", file="people2.html", nav="People 2", unlisted=True,
-         title=f"People — {SITE_NAME}",
-         desc="Faculty, graduate students, undergraduate researchers, and alumni of the "
-              "Chamorro Research Group at Carnegie Mellon University."),
     dict(key="publications", file="publications.html", nav="Publications",
          title=f"Publications — {SITE_NAME}",
          desc="Journal articles and preprints from the Chamorro Research Group and from "
