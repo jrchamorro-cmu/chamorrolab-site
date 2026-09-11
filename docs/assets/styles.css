@@ -103,7 +103,9 @@ p{margin:0 0 13px}
 #pg-people .awards li span{color:var(--muted);white-space:nowrap}
 #pg-people .role{font-size:13px;color:var(--muted);line-height:1.45}
 #pg-people .contact{font-size:13.5px;color:var(--muted);margin-top:10px}
-#pg-people .iconrow{display:flex;gap:14px;margin-top:10px}
+#pg-people .namerow{display:flex;align-items:center;justify-content:space-between;gap:20px}
+#pg-people .namerow h3{margin:0}
+#pg-people .iconrow{display:flex;gap:14px;flex:none}
 #pg-people .iconrow .ic{display:inline-flex;text-decoration:none}
 #pg-people .iconrow .ic:hover{opacity:.75}
 #pg-people .iconrow svg{width:21px;height:21px;fill:currentColor}
