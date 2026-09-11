@@ -187,6 +187,13 @@ p{margin:0 0 13px}
 .fgrid figcaption{font-size:13px;color:var(--muted);padding-top:6px}
 
 /* teaching */
+#pg-teaching .course{margin:0 0 34px;padding-bottom:26px;border-bottom:1px solid var(--rule)}
+#pg-teaching .course:last-child{border-bottom:0;padding-bottom:0}
+#pg-teaching .course h3{font-size:18px;margin:0 0 4px}
+#pg-teaching .cmeta{font-size:13px;color:var(--muted);margin-bottom:10px}
+#pg-teaching .cnow{color:var(--link);font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:11.5px;border:1px solid currentColor;border-radius:2px;padding:1px 5px;margin-left:6px}
+#pg-teaching .course p{margin:0;max-width:74ch}
+
 .ttable{border-collapse:collapse;width:100%;font-size:15px}
 .ttable th{text-align:left;font-size:12.5px;text-transform:uppercase;letter-spacing:.08em;padding:8px 14px 8px 0;border-bottom:2px solid var(--rule-strong)}
 .ttable td{padding:10px 14px 10px 0;border-bottom:1px solid var(--rule);vertical-align:top}
