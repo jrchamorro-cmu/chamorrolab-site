@@ -62,7 +62,9 @@ PAGES = [
          title=f"Software — {SITE_NAME}",
          desc="Maestro, the group's laboratory orchestration software for furnaces, sensors, "
               "and experiment logging."),
-    dict(key="facilities", file="facilities.html", nav="Facilities",
+    # Held back 2026-09-10 at Juan's direction: the page waits for a lab clean-up
+    # and new photographs. Source stays in src/pages/facilities.html.
+    dict(key="facilities", file="facilities.html", nav="Facilities", draft=True,
          title=f"Facilities — {SITE_NAME}",
          desc="Synthesis and crystal growth laboratories in Wean Hall and the shared "
               "characterization facilities available to the group at Carnegie Mellon."),
