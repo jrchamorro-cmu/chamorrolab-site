@@ -12,25 +12,31 @@ until the DNS ticket is filed, so all of this can be worked through at leisure.
       Hall 3314") and `labphoto2.jpg` ("Furnaces and preparation benches") are the two
       shown on the Facilities page. `labphoto3` and `labphoto4` are in the repo but
       unused. Captions are in `src/pages/facilities.html`.
-- [ ] Photo for Dhiya Srikanth. Currently a "DS" monogram placeholder in
+- [x] Photo for Dhiya Srikanth. Added 2026-09-10. Placeholder convention for anyone
+      without a photo is now the tartan swatch, `assets/img/tartan.svg`; Megan Yeager
+      uses it. Old note for reference:
+  - [ ] (was) monogram placeholder in
       `src/pages/people.html`. Add `assets/img/dhiyasrikanth.jpg` and swap the
       `<div class="mono">` for an `<img class="photo">` like the other students.
 - [x] PI photo. Replaced 2026-08-12 with a crop of the full-length
       `OneDrive/Work/CMU/Website/juanchamorro.jpg`.
-- [ ] Confirm the banner (a campus aerial) is the one to keep.
+- [x] Campus banner removed from the home page 2026-09-10; the group photo leads.
 
 ## Content to verify
 
-- [ ] Are Abby Chen, Luis Hierro, David Li, and Daniel Yin still active undergraduate
-      researchers this fall? They are currently listed as active.
+- [x] Abby Chen, Luis Hierro, David Li and Daniel Yin moved to alumni 2026-09-10.
+      Gary Zhang (NSF REU, summer 2026) added. Emma Greco, T'Ana Moore and Megan
+      Yeager added as current undergraduates. Still open: no email addresses shown
+      for the three new undergraduates (only Emma's is on record), and Emma's major
+      is unrecorded so she is listed as "Senior" with no department.
 - [ ] CV: decide whether to link a PDF. Source of truth is
       `OneDrive/Work/CMU/CV/CV-Chamorro-CURRENT.pdf`. If yes, copy it to `assets/`
       and link it from the People page.
 - [ ] Kaufman Foundation logo: courtesy check with the foundation before launch, since
       they may prefer a text acknowledgment. The NSF logo on a funded project is
       standard and needs no check.
-- [ ] SCES 2026 news item says "presents at" because talk versus poster is unresolved.
-      Firm it up when known.
+- [x] Resolved: it is a poster. The whole news list was rebuilt 2026-09-10 from the
+      vault as past events only, so no SCES item appears until it has happened.
 
 ## Software (Maestro) page
 
@@ -45,12 +51,14 @@ Held back from the build entirely (`draft=True` in `build.py`). To release it:
 
 ## Launch mechanics
 
-- [ ] Decide public vs private. GitHub Pages does not serve private repos on a free
-      account, so the repo has to be public (or the account upgraded) to go live.
+- [ ] Make the repo public. GitHub Pages does not serve private repos on a free
+      account. THIS IS NOW THE BLOCKER: the DNS ticket was sent 2026-09-10, so once
+      CMU repoints the CNAME the domain serves a GitHub 404 until this is done.
 - [ ] Turn on Pages: Settings, Pages, deploy from branch `main`, folder `/docs`.
-- [ ] File the DNS ticket with it-help@cmu.edu to repoint
+- [x] DNS ticket sent to it-help@cmu.edu 2026-09-10 to repoint
       `chamorrolab.andrew.cmu.edu` from `ghs.googlehosted.com` to
-      `jrchamorro-cmu.github.io`, plus the GitHub domain-verification TXT record.
+      `jrchamorro-cmu.github.io`. The domain-verification TXT record was not
+      included and can be added later.
 - [ ] Enable Enforce HTTPS in Pages once the certificate issues.
 - [ ] Export any remaining images from the Google Site, then retire it.
 - [ ] Analytics: add GA4 or a lightweight alternative if wanted. Nothing is lost by
