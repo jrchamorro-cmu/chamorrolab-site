@@ -34,6 +34,9 @@ SITE_NAME = "Chamorro Research Group"
 #   draft : True keeps the page's source in src/ but leaves it out of the build
 #           entirely: no file in docs/, no nav entry, no sitemap entry. Use for
 #           pages not cleared to go public. Flip to False to publish.
+#   unlisted : True builds the page into docs/ but keeps it out of the nav and
+#           the sitemap and marks it noindex. Use for drafts you want to look at
+#           in the browser. Reachable only by typing its filename.
 PAGES = [
     dict(key="home", file="index.html", nav="Home",
          title=f"{SITE_NAME} — Carnegie Mellon University",
@@ -46,6 +49,11 @@ PAGES = [
               "frustration, superconductivity and competing electronic orders, and autonomous "
               "crystal growth with AutoFlux."),
     dict(key="people", file="people.html", nav="People",
+         title=f"People — {SITE_NAME}",
+         desc="Faculty, graduate students, undergraduate researchers, and alumni of the "
+              "Chamorro Research Group at Carnegie Mellon University."),
+    # Layout trial, not public: portrait photographs at 4:5 and a card grid.
+    dict(key="people2", file="people2.html", nav="People 2", unlisted=True,
          title=f"People — {SITE_NAME}",
          desc="Faculty, graduate students, undergraduate researchers, and alumni of the "
               "Chamorro Research Group at Carnegie Mellon University."),
@@ -125,7 +133,7 @@ def render_publications():
 def nav_html(active):
     rows = []
     for pg in PAGES:
-        if pg.get("draft"):
+        if pg.get("draft") or pg.get("unlisted"):
             continue
         cls = ' class="active"' if pg["key"] == active else ""
         rows.append(f'      <a href="{pg["file"]}"{cls}>{pg["nav"]}</a>')
@@ -162,7 +170,7 @@ def build():
                 .replace("{{DESCRIPTION}}", html.escape(pg["desc"], quote=True))
                 .replace("{{CANONICAL}}", f'{BASE}/{"" if pg["file"] == "index.html" else pg["file"]}')
                 .replace("{{BASE}}", BASE)
-                .replace("{{HEADEXTRA}}", "")
+                .replace("{{HEADEXTRA}}", NOINDEX if pg.get("unlisted") else "")
                 .replace("{{NAV}}", nav_html(pg["key"]))
                 .replace("{{PAGE}}", pg["key"])
                 .replace("{{CONTENT}}", body)
@@ -193,7 +201,7 @@ def build():
     urls = "\n".join(
         f"  <url><loc>{BASE}/{'' if p['file'] == 'index.html' else p['file']}</loc>"
         f"<lastmod>{today}</lastmod></url>"
-        for p in PAGES if not p.get("draft"))
+        for p in PAGES if not (p.get("draft") or p.get("unlisted")))
     (OUT / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
