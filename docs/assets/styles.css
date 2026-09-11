@@ -93,20 +93,23 @@ p{margin:0 0 13px}
 #pg-people .degree{font-size:12px;font-weight:700;line-height:1.45;margin:0 0 2px}
 #pg-people .nb{white-space:nowrap}
 #pg-people .awards{margin-top:14px;border-top:1px solid var(--rule);padding-top:10px;max-width:520px}
-#pg-people .awards summary{font-size:13px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;color:var(--link);cursor:pointer;list-style:none}
+#pg-people .awards summary{font-size:12px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;color:var(--link);cursor:pointer;list-style:none}
 #pg-people .awards summary::-webkit-details-marker{display:none}
 #pg-people .awards summary::before{content:"+\00a0";font-weight:700}
 #pg-people .awards[open] summary::before{content:"\2212\00a0"}
 #pg-people .awards ul{list-style:none;margin:10px 0 2px;padding:0}
-#pg-people .awards li{font-size:13.5px;padding:5px 0;border-bottom:1px solid var(--rule);display:flex;justify-content:space-between;gap:18px}
+#pg-people .awards li{font-size:12.5px;padding:4px 0;border-bottom:1px solid var(--rule);display:flex;justify-content:space-between;gap:18px}
 #pg-people .awards li:last-child{border-bottom:0}
 #pg-people .awards li span{color:var(--muted);white-space:nowrap}
 #pg-people .role{font-size:13px;color:var(--muted);line-height:1.45}
 #pg-people .contact{font-size:13.5px;color:var(--muted);margin-top:10px}
 #pg-people .iconrow{display:flex;gap:14px;margin-top:10px}
-#pg-people .iconrow .ic{display:inline-flex;color:var(--muted);text-decoration:none}
-#pg-people .iconrow .ic:hover{color:var(--link)}
-#pg-people .iconrow svg{width:20px;height:20px;fill:currentColor}
+#pg-people .iconrow .ic{display:inline-flex;text-decoration:none}
+#pg-people .iconrow .ic:hover{opacity:.75}
+#pg-people .iconrow svg{width:21px;height:21px;fill:currentColor}
+#pg-people .iconrow .scholar{color:#4285F4}
+#pg-people .iconrow .linkedin{color:#0A66C2}
+#pg-people .iconrow .orcid{color:#A6CE39}
 #pg-people .mail{font-size:13px;margin-top:3px;word-break:break-all}
 #pg-people .bio{font-size:14.5px;line-height:1.6;margin:9px 0 0}
 
@@ -114,6 +117,9 @@ p{margin:0 0 13px}
 #pg-people .pi{display:grid;grid-template-columns:repeat(3,1fr);gap:34px 30px;align-items:start}
 #pg-people .pi .pibody{grid-column:2 / span 2}
 #pg-people .pi .pibody{padding-top:4px}
+#pg-people .pi .role{font-size:15px;color:var(--ink);line-height:1.5}
+#pg-people .pi .degree{margin-top:0}
+#pg-people .pi .degree:first-of-type{margin-top:8px}
 #pg-people .pi h3{font-size:22px;margin:0 0 6px}
 #pg-people .pi .bio{font-size:15px;margin-top:12px}
 
