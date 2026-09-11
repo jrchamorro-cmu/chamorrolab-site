@@ -114,12 +114,14 @@ p{margin:0 0 13px}
 #pg-people2 .mail{font-size:13px;margin-top:3px;word-break:break-all}
 #pg-people2 .bio{font-size:14.5px;line-height:1.6;margin:9px 0 0}
 
-#pg-people2 .pi{display:grid;grid-template-columns:262px 1fr;gap:34px;align-items:start;max-width:760px}
+/* the PI sits on the same grid as the cards, so the portrait matches them exactly */
+#pg-people2 .pi{display:grid;grid-template-columns:repeat(3,1fr);gap:34px 30px;align-items:start;max-width:960px}
+#pg-people2 .pi .pibody{grid-column:2 / span 2}
 #pg-people2 .pi .pibody{padding-top:4px}
 #pg-people2 .pi h3{font-size:22px;margin:0 0 6px}
 #pg-people2 .pi .bio{font-size:15px;margin-top:12px}
 
-#pg-people2 .pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:34px 30px}
+#pg-people2 .pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:34px 30px;max-width:960px}
 #pg-people2 .pcard{margin:0}
 #pg-people2 .pcard figcaption{border-top:2px solid var(--rule-strong);padding-top:9px;margin-top:10px}
 
@@ -131,14 +133,13 @@ p{margin:0 0 13px}
 #pg-people2 .pnote b{color:var(--ink)}
 
 @media (max-width:700px){
-  #pg-people2 .pgrid{grid-template-columns:repeat(2,1fr);gap:28px 20px}
-  #pg-people2 .pi{grid-template-columns:180px 1fr;gap:22px}
+  #pg-people2 .pgrid,#pg-people2 .pi{grid-template-columns:repeat(2,1fr);gap:28px 20px}
+  #pg-people2 .pi .pibody{grid-column:2 / span 1}
   #pg-people2 .alum2{columns:1}
 }
 @media (max-width:460px){
-  #pg-people2 .pgrid{grid-template-columns:1fr;max-width:320px}
-  #pg-people2 .pi{grid-template-columns:1fr}
-  #pg-people2 .pi .portrait{max-width:220px}
+  #pg-people2 .pgrid,#pg-people2 .pi{grid-template-columns:1fr;max-width:320px}
+  #pg-people2 .pi .pibody{grid-column:1}
 }
 
 /* publications */
