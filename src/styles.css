@@ -153,7 +153,8 @@ p{margin:0 0 13px}
 
 /* publications */
 .pyear{font-size:18px;font-weight:700;margin:28px 0 4px;padding-bottom:4px;border-bottom:1px solid var(--rule-strong)}
-.pub{padding:12px 0;border-bottom:1px solid var(--rule);font-size:15px}
+.pub{padding:12px 0;border-bottom:1px solid var(--rule);font-size:15px;display:grid;grid-template-columns:34px 1fr;gap:8px;align-items:start}
+.pub .n{color:var(--muted);font-size:13.5px;text-align:right;padding-top:1px}
 .pub:last-child{border-bottom:0}
 .pub .t{font-weight:700}
 .pub .a{color:var(--muted)}

@@ -96,29 +96,28 @@ def resolve_assets(text, where):
 
 
 def render_publications():
-    """Render publications.json to static HTML, group members in bold."""
+    """Render publications.json to static HTML: submitted first, then a numbered list."""
     data = json.loads((SRC / "data/publications.json").read_text())
     out = ['<div class="pyear">In press or submitted</div>']
     for p in data["preprints"]:
         out.append(
-            f'<div class="pub"><span class="t">{p["t"]}</span><br>'
+            f'<div class="pub"><span class="n"></span><div>'
+            f'<span class="t">{p["t"]}</span><br>'
             f'<span class="a">{p["a"]}</span><br>'
             f'<span class="v">{p["d"]}</span> '
-            f'<a class="lk" href="{p["u"]}">[arXiv]</a></div>'
+            f'<a class="lk" href="{p["u"]}">[arXiv]</a></div></div>'
         )
-    seen = []
-    for p in data["publications"]:
-        if p["y"] not in seen:
-            seen.append(p["y"])
-    for year in seen:
-        out.append(f'<div class="pyear">{year}</div>')
-        for p in [q for q in data["publications"] if q["y"] == year]:
-            out.append(
-                f'<div class="pub"><span class="t">{p["t"]}</span><br>'
-                f'<span class="a">{p["a"]}</span><br>'
-                f'<span class="v"><i>{p["v"]}</i> {p["d"]}</span> '
-                f'<a class="lk" href="{p["u"]}">[DOI]</a></div>'
-            )
+    pubs = data["publications"]
+    out.append('<div class="pyear">Published</div>')
+    for i, p in enumerate(pubs):
+        num = len(pubs) - i
+        out.append(
+            f'<div class="pub"><span class="n">{num}.</span><div>'
+            f'<span class="t">{p["t"]}</span><br>'
+            f'<span class="a">{p["a"]}</span><br>'
+            f'<span class="v"><i>{p["v"]}</i> {p["d"]}</span> '
+            f'<a class="lk" href="{p["u"]}">[DOI]</a></div></div>'
+        )
     return "\n".join(out)
 
 
