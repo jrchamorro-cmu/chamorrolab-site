@@ -68,3 +68,12 @@ pill tags, or stat tiles, and no serif display face. Full dark mode via CSS toke
 Provenance: built 2026-08-11/12 from the mockup in
 `OneDrive/Work/CMU/Website/Redesign-2026-08/`, whose session notes
 (`2026-08-11-redesign-session.md`) carry the content sourcing and the open items.
+
+## The CV on the People page
+
+`assets/docs/chamorro-cv.pdf` is a COPY of `OneDrive/Work/CMU/CV/CV-Chamorro-CURRENT.pdf`,
+taken 2026-09-10. It does not update itself. After every CV edit, re-export the PDF in the
+vault and copy it here, then rebuild:
+
+    cp "$HOME/OneDrive/Work/CMU/CV/CV-Chamorro-CURRENT.pdf" assets/docs/chamorro-cv.pdf
+    python3 build.py
