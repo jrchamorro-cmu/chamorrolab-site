@@ -76,14 +76,22 @@ p{margin:0 0 13px}
 /* the Kaufman wordmark is black and blue: keep it on white in dark mode */
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .sponsor.kaufman{background:#FFFFFF;padding:14px 18px}}
 :root[data-theme="dark"] .sponsor.kaufman{background:#FFFFFF;padding:14px 18px}
-.newsrow{display:grid;grid-template-columns:140px 1fr;gap:20px;padding:10px 0;border-bottom:1px solid var(--rule)}
+.newsrow{display:grid;grid-template-columns:140px 1fr;gap:20px;padding:10px 0;border-bottom:1px solid var(--rule);align-items:center}
 .newsrow:last-child{border-bottom:0}
-.withfig{display:flex;gap:18px;align-items:flex-start;justify-content:space-between}
-.newscover{width:132px;flex:none;border:1px solid var(--rule)}
-.newslogo{width:104px;flex:none}
-@media (max-width:540px){.withfig{flex-direction:column-reverse;gap:10px}}
+.newsrow:has(.withfig){padding:20px 0}
+/* every news image sits centred in one 220px column so they share a vertical axis */
+.withfig{display:grid;grid-template-columns:1fr 220px;gap:24px;align-items:center}
+.withfig img{justify-self:center}
+.newscover{width:132px;border:1px solid var(--rule)}
+.newslogo{width:104px}
+.newsphoto{width:220px}
+.newsmark{width:64px}
+.newsmark.kaufman{width:150px}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .newsmark.kaufman{background:#FFFFFF;padding:8px 10px}}
+:root[data-theme="dark"] .newsmark.kaufman{background:#FFFFFF;padding:8px 10px}
+@media (max-width:540px){.withfig{grid-template-columns:1fr;gap:12px}.withfig img{justify-self:start}}
 .newsrow .d{font-size:12.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding-top:2px}
-@media (max-width:540px){.newsrow{grid-template-columns:1fr;gap:2px}}
+@media (max-width:540px){.newsrow{grid-template-columns:1fr;gap:2px;align-items:start}}
 .support{font-size:13px;color:var(--muted);margin-top:34px;padding-top:16px;border-top:1px solid var(--rule)}
 
 /* research */
@@ -232,6 +240,25 @@ footer .wrap{padding:30px 22px 44px;display:flex;justify-content:space-between;a
 .rcol .rfigure{border-bottom:1px solid var(--rule);padding-bottom:6px;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center}
 .rcol .rfig{width:100%;height:100%}
 @media (max-width:820px){#pg-research .hero{grid-template-columns:1fr}.rfigure.growth{max-width:360px}.rcols{grid-template-columns:1fr;gap:34px}.rcol .rfigure{max-width:340px}}
+
+/* research: home lab and the world map of facilities */
+.homerow{display:grid;grid-template-columns:400px 1fr;gap:44px;align-items:center;margin:0 0 30px}
+.homerow .rfigure img{width:100%;display:block}
+.homerow .rtext p:last-child{margin-bottom:0}
+.mapfig{margin:0}
+.wmap{width:100%;height:auto;display:block;--land:#E4E7EB;--landline:#CBCFD5}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .wmap{--land:#262930;--landline:#3B3F47}}
+:root[data-theme="dark"] .wmap{--land:#262930;--landline:#3B3F47}
+.wmap .land{fill:var(--land);stroke:var(--landline);stroke-width:.6;stroke-linejoin:round}
+.wmap .arc{fill:none;stroke:var(--accent);stroke-width:1.1;stroke-dasharray:3 4;opacity:.5}
+.wmap .dot{fill:var(--accent);stroke:var(--bg);stroke-width:1.5}
+.wmap .dot.home{fill:none;stroke:var(--accent);stroke-width:2}
+.wmap .dotcore{fill:var(--accent)}
+.wmap .mlabel{font:600 12.5px "Helvetica Neue",Helvetica,Arial,sans-serif;fill:var(--ink);paint-order:stroke;stroke:var(--bg);stroke-width:3px;stroke-linejoin:round}
+.mapkey{list-style:none;padding:0;margin:16px 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:6px 28px;font-size:13.5px;line-height:1.45;color:var(--muted)}
+.mapkey b{color:var(--ink);font-weight:700}
+@media (max-width:820px){.homerow{grid-template-columns:1fr;gap:20px}.mapkey{grid-template-columns:1fr}}
+@media (max-width:640px){.wmap .mlabel{display:none}}
 
 /* margin decoration: a faint cubic lattice in each margin on wide screens */
 @media (min-width:1360px){

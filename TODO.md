@@ -27,9 +27,9 @@ until the DNS ticket is filed, so all of this can be worked through at leisure.
 
 - [x] Abby Chen, Luis Hierro, David Li and Daniel Yin moved to alumni 2026-09-10.
       Gary Zhang (NSF REU, summer 2026) added. Emma Greco, T'Ana Moore and Megan
-      Yeager added as current undergraduates. Still open: no email addresses shown
-      for the three new undergraduates (only Emma's is on record), and Emma's major
-      is unrecorded so she is listed as "Senior" with no department.
+      Yeager added as current undergraduates. Emma is a physics major and the page
+      says so. Still open: no email addresses shown for the three new undergraduates
+      (only Emma's is on record).
 - [ ] CV: decide whether to link a PDF. Source of truth is
       `OneDrive/Work/CMU/CV/CV-Chamorro-CURRENT.pdf`. If yes, copy it to `assets/`
       and link it from the People page.
