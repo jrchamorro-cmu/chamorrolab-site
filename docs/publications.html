@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Publications — Chamorro Research Group</title>
+<title>Publications | Chamorro Research Group</title>
 <meta name="description" content="Journal articles and preprints from the Chamorro Research Group and from Prof. Chamorro&#x27;s earlier work.">
 <link rel="canonical" href="https://chamorrolab.andrew.cmu.edu/publications.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Chamorro Research Group">
-<meta property="og:title" content="Publications — Chamorro Research Group">
+<meta property="og:title" content="Publications | Chamorro Research Group">
 <meta property="og:description" content="Journal articles and preprints from the Chamorro Research Group and from Prof. Chamorro&#x27;s earlier work.">
 <meta property="og:url" content="https://chamorrolab.andrew.cmu.edu/publications.html">
 <meta property="og:image" content="https://chamorrolab.andrew.cmu.edu/assets/img/grouppic.jpg">
@@ -17,6 +17,25 @@
 <link rel="icon" href="assets/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="stylesheet" href="assets/styles.css?v=3e72aaa7">
+<!-- Google Analytics 4, property ChamorroGroup, stream "Chamorro Lab" (the same stream the Google Site used) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7PKMXGW6YT"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-7PKMXGW6YT');
+document.addEventListener('DOMContentLoaded', function () {
+  // the growth clip is a plain <video>, which enhanced measurement does not track
+  document.querySelectorAll('video').forEach(function (v) {
+    var sent = false;
+    v.addEventListener('playing', function () { if (!sent) { sent = true; gtag('event', 'video_start', {video_title: v.getAttribute('aria-label') || 'video'}); } });
+  });
+  // the awards list on the People page
+  document.querySelectorAll('details').forEach(function (d) {
+    d.addEventListener('toggle', function () { if (d.open) gtag('event', 'details_open', {item: (d.querySelector('summary') || d).textContent.trim().slice(0, 60)}); });
+  });
+});
+</script>
 </head>
 <body>
 

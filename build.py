@@ -39,41 +39,41 @@ SITE_NAME = "Chamorro Research Group"
 #           in the browser. Reachable only by typing its filename.
 PAGES = [
     dict(key="home", file="index.html", nav="Home",
-         title=f"{SITE_NAME} — Carnegie Mellon University",
+         title=f"{SITE_NAME} | Carnegie Mellon University",
          desc="The Chamorro Lab is a quantum materials research group in Materials Science "
               "and Engineering at Carnegie Mellon University. We grow high-quality single "
               "crystals of candidate quantum materials and measure them at low temperature."),
     dict(key="research", file="research.html", nav="Research",
-         title=f"Research — {SITE_NAME}",
+         title=f"Research | {SITE_NAME}",
          desc="Emergent transport in correlated and magnetic materials, quantum magnetism and "
               "frustration, superconductivity and competing electronic orders, and autonomous "
               "crystal growth with AutoFlux."),
     dict(key="people", file="people.html", nav="People",
-         title=f"People — {SITE_NAME}",
+         title=f"People | {SITE_NAME}",
          desc="Faculty, graduate students, undergraduate researchers, and alumni of the "
               "Chamorro Research Group at Carnegie Mellon University."),
     dict(key="publications", file="publications.html", nav="Publications",
-         title=f"Publications — {SITE_NAME}",
+         title=f"Publications | {SITE_NAME}",
          desc="Journal articles and preprints from the Chamorro Research Group and from "
               "Prof. Chamorro's earlier work."),
     # Not public: the Maestro page is held back pending the CTTEC check and the
     # repo security scrub. Source stays in src/pages/software.html.
     dict(key="software", file="software.html", nav="Software", draft=True,
-         title=f"Software — {SITE_NAME}",
+         title=f"Software | {SITE_NAME}",
          desc="Maestro, the group's laboratory orchestration software for furnaces, sensors, "
               "and experiment logging."),
     # Held back 2026-09-10 at Juan's direction: the page waits for a lab clean-up
     # and new photographs. Source stays in src/pages/facilities.html.
     dict(key="facilities", file="facilities.html", nav="Facilities", draft=True,
-         title=f"Facilities — {SITE_NAME}",
+         title=f"Facilities | {SITE_NAME}",
          desc="Synthesis and crystal growth laboratories in Wean Hall and the shared "
               "characterization facilities available to the group at Carnegie Mellon."),
     dict(key="teaching", file="teaching.html", nav="Teaching",
-         title=f"Teaching — {SITE_NAME}",
+         title=f"Teaching | {SITE_NAME}",
          desc="Courses taught by Prof. Juan R. Chamorro in Materials Science and Engineering "
               "at Carnegie Mellon University."),
     dict(key="resources", file="resources.html", nav="Resources",
-         title=f"Resources — {SITE_NAME}",
+         title=f"Resources | {SITE_NAME}",
          desc="Crystallographic databases, computational tools, and references used by the "
               "Chamorro Research Group."),
 ]
@@ -170,7 +170,7 @@ def build():
 
     # 404: the home page shell with a short message
     notfound = (layout
-                .replace("{{TITLE}}", f"Page not found — {SITE_NAME}")
+                .replace("{{TITLE}}", f"Page not found | {SITE_NAME}")
                 .replace("{{DESCRIPTION}}", "That page does not exist.")
                 .replace("{{CANONICAL}}", f"{BASE}/404.html")
                 .replace("{{BASE}}", BASE)
