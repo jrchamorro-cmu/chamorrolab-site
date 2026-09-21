@@ -1,16 +1,7 @@
 :root{
+  color-scheme:light;
   --bg:#FFFFFF; --ink:#17181A; --muted:#565A5F; --link:#A6192E; --accent:#C41230;
   --rule:#DADCDE; --rule-strong:#17181A; --tint:#F5F6F7;
-}
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --bg:#131417; --ink:#E9E9E7; --muted:#9A9EA3; --link:#F08A93; --accent:#C41230;
-    --rule:#2C2E33; --rule-strong:#E9E9E7; --tint:#1C1E22;
-  }
-}
-:root[data-theme="dark"]{
-  --bg:#131417; --ink:#E9E9E7; --muted:#9A9EA3; --link:#F08A93; --accent:#C41230;
-  --rule:#2C2E33; --rule-strong:#E9E9E7; --tint:#1C1E22;
 }
 *{box-sizing:border-box}
 body{
@@ -74,9 +65,6 @@ p{margin:0 0 13px}
 .sponsors img{display:block}
 .sponsor{margin:0;text-align:center}
 .sponsor figcaption{font-size:15px;color:var(--muted);padding-top:10px}
-/* the Kaufman wordmark is black and blue: keep it on white in dark mode */
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .sponsor.kaufman{background:#FFFFFF;padding:14px 18px}}
-:root[data-theme="dark"] .sponsor.kaufman{background:#FFFFFF;padding:14px 18px}
 .newsrow{display:grid;grid-template-columns:140px 1fr;gap:20px;padding:10px 0;border-bottom:1px solid var(--rule);align-items:center}
 /* the news list keeps its closing rule; the section after it draws none of its own */
 .sect.norule{border-top:0;padding-top:0}
@@ -89,8 +77,6 @@ p{margin:0 0 13px}
 .newsphoto{width:220px}
 .newsmark{width:64px}
 .newsmark.kaufman{width:150px}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .newsmark.kaufman{background:#FFFFFF;padding:8px 10px}}
-:root[data-theme="dark"] .newsmark.kaufman{background:#FFFFFF;padding:8px 10px}
 @media (max-width:540px){.withfig{grid-template-columns:1fr;gap:12px}.withfig img{justify-self:start}}
 .newsrow .d{font-size:12.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding-top:2px}
 @media (max-width:540px){.newsrow{grid-template-columns:1fr;gap:2px;align-items:start}}
@@ -254,8 +240,6 @@ footer .wrap{padding:30px 22px 44px;display:flex;justify-content:space-between;a
 .homerow .rtext p:last-child{margin-bottom:0}
 .mapfig{margin:0}
 .wmap{width:100%;height:auto;display:block;--land:#E4E7EB;--landline:#CBCFD5}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .wmap{--land:#262930;--landline:#3B3F47}}
-:root[data-theme="dark"] .wmap{--land:#262930;--landline:#3B3F47}
 .wmap .land{fill:var(--land);stroke:var(--landline);stroke-width:.6;stroke-linejoin:round}
 .wmap .arc{fill:none;stroke:var(--accent);stroke-width:1.1;stroke-dasharray:3 4;opacity:.5}
 .wmap .dot{fill:var(--accent);stroke:var(--bg);stroke-width:1.5}
