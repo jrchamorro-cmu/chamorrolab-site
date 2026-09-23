@@ -157,6 +157,7 @@ def build():
                                 f'<div id="pubs">\n{render_publications()}\n</div>')
         body = resolve_assets(body, pg["file"])
         page = (layout
+                .replace("<!-- ANALYTICS-START -->\n", "").replace("\n<!-- ANALYTICS-END -->", "")
                 .replace("{{TITLE}}", html.escape(pg["title"], quote=True))
                 .replace("{{DESCRIPTION}}", html.escape(pg["desc"], quote=True))
                 .replace("{{CANONICAL}}", f'{BASE}/{"" if pg["file"] == "index.html" else pg["file"]}')
