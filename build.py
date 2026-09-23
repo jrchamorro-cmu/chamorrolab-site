@@ -168,8 +168,11 @@ def build():
                 .replace("{{YEAR}}", str(year)))
         (OUT / pg["file"]).write_text(page)
 
-    # 404: the home page shell with a short message
-    notfound = (layout
+    # 404: the home page shell with a short message. No analytics tag: search engines still
+    # list the squatter's spam URLs from Sept 2026, and every click on one lands here, so a
+    # tagged 404 page fills the GA4 property with those visits (about 5,000 views a day on
+    # 2026-09-22). A 404 for a typo is of no interest either.
+    notfound = (re.sub(r"<!-- ANALYTICS-START -->.*?<!-- ANALYTICS-END -->\n?", "", layout, flags=re.S)
                 .replace("{{TITLE}}", f"Page not found | {SITE_NAME}")
                 .replace("{{DESCRIPTION}}", "That page does not exist.")
                 .replace("{{CANONICAL}}", f"{BASE}/404.html")
