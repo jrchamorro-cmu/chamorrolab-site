@@ -41,7 +41,7 @@
         <label><input type="checkbox" class="cs-lost" value="NO3=O" checked> NO<sub>x</sub> from nitrates <span class="csdesc">(Ba(NO3)2, LiNO3)</span></label>
         <label><input type="checkbox" class="cs-lost" value="NH4=" checked> NH<sub>3</sub> from ammonium salts <span class="csdesc">(NH4H2PO4, (NH4)2HPO4, NH4Cl)</span></label>
         <label><input type="checkbox" class="cs-lost" value="H2O" checked> H<sub>2</sub>O from hydrates and hydroxides <span class="csdesc">(Ni(NO3)2(H2O)6, Mg(OH)2, FeO(OH))</span></label>
-        <label><input type="checkbox" class="cs-lost" value="C" checked> Carbon from organic salts <span class="csdesc">(acetates, oxalates, citrates)</span></label>
+        <label><input type="checkbox" class="cs-lost" value="C,H" checked> CO<sub>2</sub> and H<sub>2</sub>O from organic precursors <span class="csdesc">(acetates, oxalates, citrates, acetylacetonates, alkoxides)</span></label>
       </td>
     </tr>
     <tr>
@@ -53,7 +53,7 @@
   <details class="csadv">
     <summary>Advanced: the do-not-balance list</summary>
     <p class="csdesc">The choices above write this list in the original ChemSolve syntax. You can edit it by hand; the next change to the choices above rewrites it.</p>
-    <input type="text" id="cs-dummy" value="CO3=O,NO3=O,NH4=,H2O,C,O" aria-label="Do-not-balance list" autocapitalize="off" autocorrect="off" spellcheck="false">
+    <input type="text" id="cs-dummy" value="CO3=O,NO3=O,NH4=,H2O,C,H,O" aria-label="Do-not-balance list" autocapitalize="off" autocorrect="off" spellcheck="false">
   </details>
   <button type="submit" class="csbtn">Calculate</button>
   </form>
@@ -74,14 +74,16 @@
 <ul class="csnotelist">
   <li><b>What it does.</b> It finds the ratio of starting materials that gives the target with every element balanced, then scales that to your total mass. Atoms that leave as gas (CO<sub>2</sub>, NO<sub>x</sub>, H<sub>2</sub>O, NH<sub>3</sub>, and O<sub>2</sub> when open to air) are left out of the balance.</li>
   <li><b>Formulas.</b> Capital letters matter: Co is cobalt, CO is carbon and oxygen. Decimals are fine: La1.85Sr0.15CuO4. Separate starting materials with commas.</li>
-  <li><b>Hydrates.</b> Write the water as its own group: Ni(NO3)2(H2O)6, not Ni(NO3)2&middot;6H2O or Ni(NO3)2H12O6.</li>
-  <li><b>Groups.</b> One level of parentheses only. Ba3(Co(CN)6)2 is read wrongly; write it as Ba3Co2C12N12.</li>
+  <li><b>Hydrates.</b> Write Ni(NO3)2&middot;6H2O, Ni(NO3)2*6H2O or Ni(NO3)2(H2O)6. Do not use a period (Ni(NO3)2.6H2O): a period is a decimal point, so that reads as 2.6 nitrate groups.</li>
+  <li><b>Groups.</b> Parentheses can be nested, and square brackets work too: Ba3(Co(CN)6)2, K3[Fe(CN)6]. Nested groups are multiplied out, so the result may show Ba3(CoC6N6)2.</li>
   <li><b>Nitrate or oxynitride.</b> Ba(NO3)2 is read as a nitrate and ZrNbO3N as an oxynitride. Write BaN2O6 to force an oxynitride, or ZrNbNO3 to force a nitrate.</li>
+  <li><b>Carbon in the product.</b> Carbides, borocarbides and similar targets need Sealed (or untick the organic box), otherwise the carbon is ignored and the calculation fails.</li>
+  <li><b>Additives.</b> Leave out anything that ends up entirely as gas, such as citric acid, urea or ethylene glycol in a sol-gel. Weigh those separately.</li>
   <li><b>Isotopes.</b> Use an underscore: target Sm(B_11)5B_10 from Sm, B_11 and B_10.</li>
   <li><b>Reading the result.</b> "Li2CO3 as Li2" shows the part of each material that is balanced. A warning such as "YB could be Yb" tells you how an ambiguous formula was read; if the reading is right, ignore it.</li>
   <li><b>Check it.</b> Look at the balanced reaction at the top of the result. If it is not the reaction you meant, change the setup or the tick boxes.</li>
 </ul>
-<p class="small">A JavaScript port of <a href="https://github.com/tmcqueen-materials/chemsolve">ChemSolve</a> by the McQueen Lab, Johns Hopkins University, released under the GNU GPL version 2. Changes from the original: the reaction setup and tick boxes above replace the typed do-not-balance list, and units removed with UNIT= (such as NH4=) are dropped from the balance, where the original reports those materials as not used. The port's source, <a href="assets/js/chemsolve.js">chemsolve.js</a>, is under the same license. <a href="members.html">All group tools</a></p>
+<p class="small">A JavaScript port of <a href="https://github.com/tmcqueen-materials/chemsolve">ChemSolve</a> by the McQueen Lab, Johns Hopkins University, released under the GNU GPL version 2. Changes from the original: the reaction setup and tick boxes above replace the typed do-not-balance list; nested groups, brackets and dot hydrates are accepted; and units removed with UNIT= (such as NH4=) are dropped from the balance, where the original reports those materials as not used. The port's source, <a href="assets/js/chemsolve.js">chemsolve.js</a>, is under the same license. <a href="members.html">All group tools</a></p>
 
 </div>
 </div>
@@ -100,7 +102,7 @@
   // The reaction setup and tick boxes write the do-not-balance list, most specific entries
   // first (the order matters: H2O must come before O, or O strips the oxygen first).
   // Sealed: nothing leaves, so the list is empty. Open to air: the ticked gases, then O.
-  var ORDER = ["CO3=O", "NO3=O", "NH4=", "H2O", "C"];
+  var ORDER = ["CO3=O", "NO3=O", "NH4=", "H2O", "C,H"];
   function buildList() {
     var open = document.querySelector('input[name="cs-setup"]:checked').value === "open";
     var ticked = Array.prototype.map.call(document.querySelectorAll(".cs-lost:checked"), function (b) { return b.value; });
@@ -120,8 +122,8 @@
 
   document.getElementById("csform").addEventListener("submit", function (ev) {
     ev.preventDefault();
-    var target = clean(document.getElementById("cs-target").value);
-    var source = clean(document.getElementById("cs-source").value);
+    var target = clean(window.ChemSolve.normalize(document.getElementById("cs-target").value));
+    var source = clean(window.ChemSolve.normalize(document.getElementById("cs-source").value));
     var dummy = cleanTokens(document.getElementById("cs-dummy").value);
     var amount = clean(document.getElementById("cs-amount").value);
     var qtype = document.getElementById("cs-qtype").value;

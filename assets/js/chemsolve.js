@@ -893,9 +893,55 @@
   // sanitize_paranoid_string / sanitize_paranoid_tokens do.
   // dummy === null or undefined means "not set" (form not submitted).
   // ------------------------------------------------------------------
+  // ------------------------------------------------------------------
+  // Chamorro Lab additions (2026-09-25), not in the PHP
+  // ------------------------------------------------------------------
+  // The PHP parser reads one level of parentheses only: Ba3(Co(CN)6)2 comes out wrong. Before
+  // parsing, expand every group that sits inside another group by multiplying out its counts:
+  // Ba3(Co(CN)6)2 -> Ba3(CoC6N6)2, which the parser reads correctly. Groups at the first level,
+  // such as (H2O)6 or (NO3)2, are left as they are so the do-not-balance list still sees them.
+  // A group holding an isotope (B_11) or anything unexpected is left alone.
+  function fmtCount(x) {
+    var s = String(parseFloat(x.toPrecision(12)));
+    return s === '1' ? '' : s;
+  }
+  function expandNested(f) {
+    for (var guard = 0; guard < 50; guard++) {
+      var re = /\(([^()]*)\)(\d*\.?\d*)/g, m, done = true;
+      while ((m = re.exec(f)) !== null) {
+        var before = f.slice(0, m.index);
+        var depth = (before.match(/\(/g) || []).length - (before.match(/\)/g) || []).length;
+        if (depth < 1) continue;                        // first-level group: keep it
+        var inner = m[1];
+        if (!/^([A-Z][a-z]?\d*\.?\d*)+$/.test(inner)) continue;   // isotopes or odd input: leave
+        var mult = m[2] === '' || m[2] === '.' ? 1 : parseFloat(m[2]);
+        var flat = inner.replace(/([A-Z][a-z]?)(\d*\.?\d*)/g, function (_, el, n) {
+          var c = n === '' || n === '.' ? 1 : parseFloat(n);
+          return el + fmtCount(c * mult);
+        });
+        f = f.slice(0, m.index) + flat + f.slice(m.index + m[0].length);
+        done = false;
+        break;
+      }
+      if (done) break;
+    }
+    return f;
+  }
+  // Rewrite common ways of typing a formula into the syntax the parser reads, before the input
+  // filter removes the characters: square and curly brackets become parentheses, and a hydrate
+  // or adduct written with a dot (Ni(NO3)2·6H2O, CuSO4*5H2O) becomes a group, Ni(NO3)2(H2O)6.
+  function normalize(s) {
+    s = String(s === null || s === undefined ? '' : s);
+    s = s.replace(/[\[{]/g, '(').replace(/[\]}]/g, ')');
+    s = s.replace(/\s*[·•⋅∙*]\s*(\d*\.?\d*)\s*([A-Za-z0-9_()]+)/g, function (_, n, unit) {
+      return '(' + unit + ')' + (n === '1' ? '' : n);
+    });
+    return s;
+  }
+
   function solve(target, source, dummy, amount, quantType) {
-    target = (target === null || target === undefined) ? '' : String(target);
-    source = (source === null || source === undefined) ? '' : String(source);
+    target = (target === null || target === undefined) ? '' : expandNested(String(target));
+    source = (source === null || source === undefined) ? '' : String(source).split(',').map(expandNested).join(',');
     amount = (amount === null || amount === undefined) ? '' : String(amount);
     if (quantType === null || quantType === undefined) quantType = ONE;
     else if (typeof quantType === 'number') quantType = Number.isInteger(quantType) ? BigInt(quantType) : quantType;
@@ -945,8 +991,9 @@
 
   var api = {
     solve: solve,
+    normalize: normalize,
     // exposed for testing
-    _internal: { sprintfF: sprintfF, phpStr: phpStr, solve_amounts: solve_amounts, parse_compound: parse_compound }
+    _internal: { expandNested: expandNested, sprintfF: sprintfF, phpStr: phpStr, solve_amounts: solve_amounts, parse_compound: parse_compound }
   };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   if (root) root.ChemSolve = api;

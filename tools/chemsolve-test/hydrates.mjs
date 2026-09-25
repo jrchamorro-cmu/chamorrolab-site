@@ -6,7 +6,7 @@ import { createRequire } from 'module';
 const CS = createRequire(import.meta.url)('../../assets/js/chemsolve.js');
 const MW = { NiO: 74.69, NiNO3_6H2O: 290.79, La2O3: 325.81, LaNiO3: 245.60, CuSO4_5H2O: 249.69, CuO: 79.55,
   YNO3_6H2O: 383.01, CuNO3_3H2O: 241.60, Y2Cu2O5: 384.90, CaCO3: 100.09, NH42HPO4: 132.06, Ca3PO42: 310.18,
-  YCl3_6H2O: 303.36, MgOH2: 58.32, AlOH3: 78.00, AlOOH: 59.99, MgAl2O4: 142.27, LiOH_H2O: 41.96,
+  YCl3_6H2O: 303.36, MgOH2: 58.32, TTIP: 284.22, Feacac3: 353.17, Yacac3: 386.24, BaOAc2: 255.42, Fe2O3: 159.69, AlOH3: 78.00, AlOOH: 59.99, MgAl2O4: 142.27, LiOH_H2O: 41.96,
   FeOOH: 88.85, LiFeO2: 94.78, BaOH2_8H2O: 315.46, TiO2: 79.87, BaTiO3: 233.19, Y2O3: 225.81, CoC2O4_2H2O: 182.98, CoO: 74.93, Cs2CO3: 325.82, NH4Cl: 53.49, CsCl: 168.36 };
 // [target, sources, dummy, mg, quantType, [[coefficient, MW] for each source in order], product MW]
 const T = [
@@ -27,6 +27,11 @@ const T = [
   ['LiFeO2', 'LiOH(H2O),FeO(OH)', 'CO3=O,NO3=O,O,H', 300, 1, [[1, MW.LiOH_H2O], [1, MW.FeOOH]], MW.LiFeO2],
   ['BaTiO3', 'Ba(OH)2(H2O)8,TiO2', 'CO3=O,NO3=O,O,H2O=,H', 300, 1, [[1, MW.BaOH2_8H2O], [1, MW.TiO2]], MW.BaTiO3],
   ['LaNiO3', 'La2O3,Ni(NO3)2(H2O)6', 'CO3=O,NO3=O,O,H', 300, 1, [[0.5, MW.La2O3], [1, MW.NiNO3_6H2O]], MW.LaNiO3],
+  // organic precursors: carbon and hydrogen both leave (the page's organic tick box writes C,H)
+  ['TiO2', 'Ti(OC3H7)4', 'CO3=O,NO3=O,NH4=,H2O,C,H,O', 300, 1, [[1, MW.TTIP]], MW.TiO2],
+  ['Fe2O3', 'Fe(C5H7O2)3', 'CO3=O,NO3=O,NH4=,H2O,C,H,O', 300, 1, [[2, MW.Feacac3]], MW.Fe2O3],
+  ['Y2O3', 'Y(C5H7O2)3', 'CO3=O,NO3=O,NH4=,H2O,C,H,O', 300, 1, [[2, MW.Yacac3]], MW.Y2O3],
+  ['BaTiO3', 'Ba(CH3COO)2,Ti(OC3H7)4', 'CO3=O,NO3=O,NH4=,H2O,C,H,O', 300, 1, [[1, MW.BaOAc2], [1, MW.TTIP]], MW.BaTiO3],
   ['CsCl', 'Cs2CO3,NH4Cl', 'CO3=O,NO3=O,O,NH4=,H', 300, 1, [[0.5, MW.Cs2CO3], [1, MW.NH4Cl]], MW.CsCl],
 ];
 let pass = 0;

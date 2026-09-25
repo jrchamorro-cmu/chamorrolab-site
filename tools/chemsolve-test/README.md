@@ -10,6 +10,7 @@ original PHP, run locally through WebAssembly PHP. It never contacts any ChemSol
     node --experimental-websocket e2e.mjs cases.json tricky.json     # the built page vs PHP
 
     node hydrates.mjs                                                # unit removal vs hand-calculated masses
+    node nested.mjs                                                  # nested groups, brackets, dot hydrates vs flat form
 
 One deliberate change from the PHP (2026-09-25, `make_flat` in chemsolve.js): a unit removed with
 `UNIT=` (hydrate water `H2O=`, ammonium `NH4=`) is dropped from the balance. The PHP leaves an
@@ -26,3 +27,10 @@ input filters.
 `upstream/` and `node_modules/` are not committed. Last run 2026-09-25, PHP 8.3, after the unit-removal change: compare.mjs and e2e.mjs 2,578 of
 2,578 matching (181 hand-written plus 2,800 generated cases, 403 unit-removal cases with no PHP
 answer skipped), masses bit-identical; hydrates.mjs 11 of 11.
+
+Second deliberate change (2026-09-25): chemsolve.js rewrites formulas before parsing. Nested
+groups are multiplied out (`expandNested`: Ba3(Co(CN)6)2 -> Ba3(CoC6N6)2), and the page turns
+brackets into parentheses and dot hydrates into groups (`normalize`: Ni(NO3)2·6H2O ->
+Ni(NO3)2(H2O)6). compare.mjs and e2e.mjs skip formulas with nested groups, brackets or dots;
+nested.mjs checks that each gives exactly the same masses as the formula written flat.
+Run 2026-09-25: compare.mjs and e2e.mjs 2,265 of 2,265, hydrates.mjs 21 of 21, nested.mjs 10 of 10.
