@@ -9,6 +9,11 @@
  * commas, product-mass rescaling for quantType 2, sprintf("%.1f") display).
  * It is licensed under the GNU General Public License, version 2.
  *
+ * Modified by the Chamorro Research Group, Carnegie Mellon University, 2026-09-25: units removed
+ * with UNIT= are dropped from the balance (make_flat), and formulas are rewritten before parsing
+ * (expandNested for nested groups; normalize for brackets and dot hydrates). Each change is
+ * marked "Chamorro Lab" in the code.
+ *
  * It reproduces PHP 8 semantics: int vs float (ints are held as BigInt),
  * numeric strings, loose comparisons, float-to-string at precision 14, and
  * sprintf %f rounding (exact decimal value, ties to even). Where PHP 8 would

@@ -236,6 +236,7 @@ p{margin:0 0 13px}
 .csmsgs{background:#FBF1DC;border:1px solid #E3CFA3;padding:10px 16px;margin:0 0 16px}
 .cswarn,.cserr{font-size:14.5px;margin:4px 0}
 .cserr{color:#B3261E}
+.csback{font-size:16px;margin:18px 0 0}
 .csnotes{margin-top:30px}
 .csnotelist{font-size:14.5px;padding-left:18px}
 .csnotelist li{margin-bottom:6px}
