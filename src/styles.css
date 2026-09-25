@@ -207,6 +207,41 @@ p{margin:0 0 13px}
 .rescol ul{margin:0 0 22px;padding-left:18px}
 .rescol li{padding:3px 0}
 .rescol .note{color:var(--muted);font-size:13px}
+/* ChemSolve: the original ChemSolve layout in a narrow column inside the site layout */
+.cs{max-width:780px;margin:0 auto}
+.cs > h2:first-child{margin-top:34px}
+.csbox{background:#F3F6F9;border:1px solid #CBD5DE;padding:18px 20px;margin:0 0 16px}
+.csbox > p:first-child{margin-top:0}
+.csintro{font-size:14px;color:var(--muted)}
+.csquery{border-collapse:collapse;width:100%;margin:4px 0 16px;background:#fff}
+.csquery th,.csquery td{border:1px solid #D5DDE4;padding:8px 10px;vertical-align:middle;text-align:left}
+.csquery th{font-size:14px;font-weight:700;white-space:nowrap;background:#E9EEF3}
+.csquery input[type=text]{font:inherit;font-size:15px;padding:6px 8px;border:1px solid #9AA7B3;border-radius:3px;width:190px}
+.csquery input[type=text]:focus{outline:2px solid #5B7FA3;outline-offset:0;border-color:#5B7FA3}
+.csdesc{font-size:13px;line-height:1.45;color:var(--muted)}
+.csdesc select{font:inherit;font-size:13px}
+.csbtn{font:inherit;font-size:15px;padding:7px 22px;border:1px solid var(--link);background:var(--link);color:#fff;border-radius:3px;cursor:pointer}
+.csbtn:hover{background:#8C1526}
+.csanswer pre{font:14px/1.55 Menlo,Consolas,"Courier New",monospace;color:#1F4E8C;margin:0;white-space:pre}
+.csanswer pre + table{margin-top:14px}
+.csresult{border-collapse:collapse;background:#fff;min-width:280px}
+.csresult th,.csresult td{border:1px solid #CBD5DE;padding:6px 12px;text-align:left}
+.csresult th{background:#E9EEF3;font-size:14px}
+.csresult td:last-child,.csresult th:last-child{text-align:right;font-variant-numeric:tabular-nums}
+.csmsgs{background:#FBF1DC;border:1px solid #E3CFA3;padding:10px 16px;margin:0 0 16px}
+.cswarn,.cserr{font-size:14.5px;margin:4px 0}
+.cserr{color:#B3261E}
+.csnotes{margin-top:30px}
+.csnotelist{font-size:14.5px;padding-left:18px}
+.csnotelist li{margin-bottom:6px}
+@media (max-width:600px){
+  .csbox{padding:14px 12px}
+  .csquery,.csquery tbody,.csquery tr,.csquery th,.csquery td{display:block;width:100%}
+  .csquery tr{margin-bottom:10px;border:1px solid #D5DDE4}
+  .csquery th,.csquery td{border:0}
+  .csquery input[type=text]{width:100%}
+  .csanswer pre{white-space:pre-wrap}
+}
 .gateform{display:flex;gap:10px;flex-wrap:wrap;margin:6px 0 12px}
 .gateform input{font:inherit;padding:7px 10px;border:1px solid var(--rule-strong);border-radius:0;width:240px;max-width:100%}
 .gateform button{font:inherit;padding:7px 18px;border:1px solid var(--link);background:var(--link);color:#fff;border-radius:0;cursor:pointer}

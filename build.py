@@ -84,6 +84,9 @@ PAGES = [
     dict(key="members", file="members.html", nav="Members", unlisted=True, noanalytics=True,
          title=f"Group tools | {SITE_NAME}",
          desc="Tools for members of the Chamorro Research Group."),
+    dict(key="chemsolve", file="chemsolve.html", nav="ChemSolve", unlisted=True, noanalytics=True,
+         title=f"ChemSolve | {SITE_NAME}",
+         desc="Stoichiometry for solid state synthesis, for members of the Chamorro Research Group."),
 ]
 
 EXT = {"IMG": ".jpg", "PNG": ".png", "SVG": ".svg"}
@@ -196,11 +199,6 @@ def build():
                          '<p>That page does not exist. Try the <a href="index.html">home page</a>.</p>')
                 .replace("{{YEAR}}", str(year)))
     (OUT / "404.html").write_text(notfound)
-
-    # Standalone pages: complete HTML files copied as they are, with no site layout and no
-    # analytics. ChemSolve lives here so it looks like the original McQueen Lab page.
-    for f in sorted((SRC / "standalone").glob("*.html")):
-        shutil.copy2(f, OUT / f.name)
 
     # GitHub Pages plumbing
     (OUT / "CNAME").write_text(DOMAIN + "\n")
