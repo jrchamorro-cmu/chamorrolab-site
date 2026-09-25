@@ -207,23 +207,6 @@ p{margin:0 0 13px}
 .rescol ul{margin:0 0 22px;padding-left:18px}
 .rescol li{padding:3px 0}
 .rescol .note{color:var(--muted);font-size:13px}
-.csform{display:grid;grid-template-columns:170px 1fr;gap:12px 18px;align-items:start;margin:18px 0 22px;max-width:760px}
-.csform label{font-weight:700;padding-top:7px}
-.csform input[type=text]{font:inherit;padding:7px 10px;border:1px solid var(--rule-strong);border-radius:0;width:100%;max-width:420px;display:block}
-.csform .note{display:block;color:var(--muted);font-size:13px;margin-top:4px}
-.csform select{font:inherit;font-size:13px}
-.csform button{font:inherit;padding:7px 22px;border:1px solid var(--link);background:var(--link);color:#fff;border-radius:0;cursor:pointer}
-@media (max-width:560px){.csform{grid-template-columns:1fr;gap:4px}.csform label{padding-top:12px}}
-.csout pre{font:14px/1.5 Menlo,Consolas,monospace;white-space:pre-wrap;margin:0 0 6px}
-.cstable{border-collapse:collapse;margin:14px 0 10px;min-width:260px}
-.cstable th,.cstable td{text-align:left;padding:5px 22px 5px 0;border-bottom:1px solid var(--rule)}
-.cstable th{border-bottom:2px solid var(--rule-strong)}
-.cstable td:last-child,.cstable th:last-child{text-align:right;padding-right:0}
-.cswarn,.cserr{font-size:14.5px;margin:6px 0}
-.cserr{color:var(--link)}
-.csnotes{margin-top:34px}
-.csnotelist{font-size:14.5px;padding-left:18px;max-width:760px}
-.csnotelist li{margin-bottom:6px}
 .gateform{display:flex;gap:10px;flex-wrap:wrap;margin:6px 0 12px}
 .gateform input{font:inherit;padding:7px 10px;border:1px solid var(--rule-strong);border-radius:0;width:240px;max-width:100%}
 .gateform button{font:inherit;padding:7px 18px;border:1px solid var(--link);background:var(--link);color:#fff;border-radius:0;cursor:pointer}
