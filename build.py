@@ -37,6 +37,8 @@ SITE_NAME = "Chamorro Research Group"
 #   unlisted : True builds the page into docs/ but keeps it out of the nav and
 #           the sitemap and marks it noindex. Use for drafts you want to look at
 #           in the browser. Reachable only by typing its filename.
+#   noanalytics : True strips the Google Analytics block from the page. Use for the
+#           members-only tools, so nothing typed there is ever sent to Google.
 PAGES = [
     dict(key="home", file="index.html", nav="Home",
          title=f"{SITE_NAME} | Carnegie Mellon University",
@@ -76,6 +78,12 @@ PAGES = [
          title=f"Resources | {SITE_NAME}",
          desc="Crystallographic databases, computational tools, and references used by the "
               "Chamorro Research Group."),
+    # Members-only tools, linked from Resources. Behind a group passphrase that is checked
+    # in the browser (src/pages/members.html). The gate hides the page from casual visitors;
+    # it is not security, since the page source is public.
+    dict(key="members", file="members.html", nav="Members", unlisted=True, noanalytics=True,
+         title=f"Group tools | {SITE_NAME}",
+         desc="Tools for members of the Chamorro Research Group."),
 ]
 
 EXT = {"IMG": ".jpg", "PNG": ".png", "SVG": ".svg"}
@@ -156,7 +164,9 @@ def build():
             body = body.replace('<div id="pubs"></div>',
                                 f'<div id="pubs">\n{render_publications()}\n</div>')
         body = resolve_assets(body, pg["file"])
-        page = (layout
+        shell = (re.sub(r"<!-- ANALYTICS-START -->.*?<!-- ANALYTICS-END -->\n?", "", layout, flags=re.S)
+                 if pg.get("noanalytics") else layout)
+        page = (shell
                 .replace("<!-- ANALYTICS-START -->\n", "").replace("\n<!-- ANALYTICS-END -->", "")
                 .replace("{{TITLE}}", html.escape(pg["title"], quote=True))
                 .replace("{{DESCRIPTION}}", html.escape(pg["desc"], quote=True))

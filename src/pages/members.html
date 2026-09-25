@@ -1,0 +1,49 @@
+<h2>Group tools</h2>
+
+<div id="gate">
+  <p>These tools are for members of the Chamorro Research Group. Enter the group passphrase. This browser remembers it after the first time.</p>
+  <form id="gateform" class="gateform" autocomplete="off">
+    <input id="gatepass" type="password" aria-label="Group passphrase" placeholder="Passphrase" autocapitalize="off" autocorrect="off" spellcheck="false">
+    <button type="submit">Open</button>
+  </form>
+  <p id="gatemsg" class="small" hidden>That passphrase is not right. Ask Juan or a group member.</p>
+</div>
+
+<div id="members" hidden>
+  <div class="rescol">
+    <ul>
+      <li>ChemSolve, stoichiometry for solid state synthesis <span class="note">(in preparation)</span></li>
+    </ul>
+  </div>
+  <p class="small">Calculations on these pages run in your browser. Nothing you type is sent to any server or recorded.</p>
+</div>
+
+<script>
+// Group passphrase gate. The page compares a SHA-256 hash of what is typed with the one
+// below and remembers a match in this browser's localStorage. It keeps casual visitors out;
+// it is not security, since this source is public. To change the passphrase, replace HASH
+// with the output of: printf %s "newphrase" | shasum -a 256   (lower case, no spaces)
+(function () {
+  var HASH = "0a8d171a0f9b8fe0ae4ff1871604bbaea03feae754cec2b9ba930421da9acfbe";
+  var KEY = "crg-members";
+  function show() {
+    document.getElementById("gate").hidden = true;
+    document.getElementById("members").hidden = false;
+  }
+  try { if (localStorage.getItem(KEY) === HASH) { show(); return; } } catch (e) {}
+  async function sha256(text) {
+    var buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(text));
+    return Array.from(new Uint8Array(buf)).map(function (b) { return b.toString(16).padStart(2, "0"); }).join("");
+  }
+  document.getElementById("gateform").addEventListener("submit", async function (ev) {
+    ev.preventDefault();
+    var typed = document.getElementById("gatepass").value.trim().toLowerCase().replace(/\s+/g, "");
+    if (await sha256(typed) === HASH) {
+      try { localStorage.setItem(KEY, HASH); } catch (e) {}
+      show();
+    } else {
+      document.getElementById("gatemsg").hidden = false;
+    }
+  });
+})();
+</script>
