@@ -102,10 +102,10 @@
 <ul class="csnotelist">
   <li>NaNO3 and Ba(NO3)2 are recognized as nitrates whereas ZrNbO3N is treated as an oxynitride. To force recognition of Ba(NO3)2 as an oxynitride you would write BaN2O6 instead. To force recognition of ZrNbO3N as a nitrate, you would write ZrNbNO3.</li>
   <li>Generally items on the do not balance list should be ordered from most to least specific.</li>
-  <li>For do not balance items, <i>only</i> individual elements may be directly ignored. Hydrates (e.g. Ni(NO3)2(H2O)6) are not handled correctly by this version: the hydrate is reported as not used.</li>
+  <li>For do not balance items, <i>only</i> individual elements may be directly ignored. If you wish to have the program ignore more complicated units (e.g. water, such as if a starting material is a hydrate), then you should put a UNIT= on the line, indicating that UNIT should be replaced with nothing, e.g. "CO3=O,NO3=O,O,H2O=" for ignoring water units. "CO3=O,NO3=O,O,H2O" would not work. Write the water as a group: Ni(NO3)2(H2O)6, not Ni(NO3)2H12O6. The same works for ammonium salts with NH4=, e.g. "CO3=O,NO3=O,O,NH4=,H" for (NH4)2HPO4.</li>
   <li>Isotopes can be specified. For example, you can target Sm(B_11)5B_10, with Sm, B_11, and B_10 as starting materials.</li>
 </ul>
-<p class="small">A JavaScript port of <a href="https://github.com/tmcqueen-materials/chemsolve">ChemSolve</a> by the McQueen Lab, Johns Hopkins University, released under the GNU GPL version 2. The port's source, <a href="assets/js/chemsolve.js">chemsolve.js</a>, is under the same license. <a href="members.html">All group tools</a></p>
+<p class="small">A JavaScript port of <a href="https://github.com/tmcqueen-materials/chemsolve">ChemSolve</a> by the McQueen Lab, Johns Hopkins University, released under the GNU GPL version 2. One change from the original: units removed with UNIT= (hydrate water, ammonium) are dropped from the balance; the original reports those starting materials as not used. The port's source, <a href="assets/js/chemsolve.js">chemsolve.js</a>, is under the same license. <a href="members.html">All group tools</a></p>
 
 </div>
 </div>

@@ -573,6 +573,10 @@
     if (factor === undefined) factor = ONE;
     var warnings = [];
     for (var i = 0; i < tgt.length; i++) {
+      // Chamorro Lab change (2026-09-25), not in the PHP: a unit remapped to nothing
+      // ("H2O=") leaves an entry with an empty name here. The PHP counts it as an element
+      // with no name, so every hydrate came out "Not Used". Skip it, so the unit is removed.
+      if (isArr(tgt[i][0]) && tgt[i][0].length === 0) continue;
       if (isArr(idx(idx(tgt[i], 0), 0))) {
         if (cmp(tgt[i][1], ZERO) > 0) {
           var rv = make_flat(tgt[i][0], newtgt, mul(tgt[i][1], factor));
