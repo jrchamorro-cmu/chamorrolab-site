@@ -27,9 +27,22 @@
       <td class="csdesc">The metals, oxides, carbonates, nitrates, etc. to start with.</td>
     </tr>
     <tr>
-      <th><label for="cs-dummy">DO NOT Balance</label></th>
-      <td><input type="text" id="cs-dummy" value="CO3=O,NO3=O,O" autocapitalize="off" autocorrect="off" spellcheck="false"></td>
-      <td class="csdesc">These elements/compounds are ignored for atom-balance purposes. CO3=O means, e.g., that Na2CO3 is treated as Na2O and NO3=O means, e.g., that NaNO3 is treated as NaO. O means that oxygen can equilibrate with the atmosphere.</td>
+      <th>Reaction Setup</th>
+      <td colspan="2" class="csopts">
+        <label><input type="radio" name="cs-setup" value="open" checked> <b>Open to air</b> <span class="csdesc">(box furnace in air, flowing gas): oxygen can enter or leave the sample</span></label>
+        <label><input type="radio" name="cs-setup" value="sealed"> <b>Sealed</b> <span class="csdesc">(evacuated quartz tube, arc melter, glovebox): every atom you weigh in ends up in the product</span></label>
+      </td>
+    </tr>
+    <tr>
+      <th>Lost on Heating</th>
+      <td colspan="2" class="csopts">
+        <span class="csdesc">Gases that leave the starting materials. Tick what applies; extra ticks do no harm.</span>
+        <label><input type="checkbox" class="cs-lost" value="CO3=O" checked> CO<sub>2</sub> from carbonates <span class="csdesc">(Li2CO3, BaCO3)</span></label>
+        <label><input type="checkbox" class="cs-lost" value="NO3=O" checked> NO<sub>x</sub> from nitrates <span class="csdesc">(Ba(NO3)2, LiNO3)</span></label>
+        <label><input type="checkbox" class="cs-lost" value="NH4=" checked> NH<sub>3</sub> from ammonium salts <span class="csdesc">(NH4H2PO4, (NH4)2HPO4, NH4Cl)</span></label>
+        <label><input type="checkbox" class="cs-lost" value="H2O" checked> H<sub>2</sub>O from hydrates and hydroxides <span class="csdesc">(Ni(NO3)2(H2O)6, Mg(OH)2, FeO(OH))</span></label>
+        <label><input type="checkbox" class="cs-lost" value="C" checked> Carbon from organic salts <span class="csdesc">(acetates, oxalates, citrates)</span></label>
+      </td>
     </tr>
     <tr>
       <th><label for="cs-amount">Quantity / mg</label></th>
@@ -37,6 +50,11 @@
       <td class="csdesc">The total quantity of <select id="cs-qtype" aria-label="Quantity refers to"><option value="1">starting materials</option><option value="2">product</option></select>, in milligrams.</td>
     </tr>
   </table>
+  <details class="csadv">
+    <summary>Advanced: the do-not-balance list</summary>
+    <p class="csdesc">The choices above write this list in the original ChemSolve syntax. You can edit it by hand; the next change to the choices above rewrites it.</p>
+    <input type="text" id="cs-dummy" value="CO3=O,NO3=O,NH4=,H2O,C,O" aria-label="Do-not-balance list" autocapitalize="off" autocorrect="off" spellcheck="false">
+  </details>
   <button type="submit" class="csbtn">Calculate</button>
   </form>
 </div>
@@ -52,15 +70,18 @@
 
 <div class="csmsgs" id="cs-msgs" hidden></div>
 
-<h3 class="csnotes">Notes</h3>
+<h3 class="csnotes">How to use it</h3>
 <ul class="csnotelist">
-  <li>NaNO3 and Ba(NO3)2 are recognized as nitrates whereas ZrNbO3N is treated as an oxynitride. To force recognition of Ba(NO3)2 as an oxynitride you would write BaN2O6 instead. To force recognition of ZrNbO3N as a nitrate, you would write ZrNbNO3.</li>
-  <li>Generally items on the do not balance list should be ordered from most to least specific.</li>
-  <li>For do not balance items, <i>only</i> individual elements may be directly ignored. If you wish to have the program ignore more complicated units (e.g. water, such as if a starting material is a hydrate), then you should put a UNIT= on the line, indicating that UNIT should be replaced with nothing, e.g. "CO3=O,NO3=O,O,H2O=" for ignoring water units. "CO3=O,NO3=O,O,H2O" would not work. Write the water as a group: Ni(NO3)2(H2O)6, not Ni(NO3)2H12O6. The same works for ammonium salts with NH4=, e.g. "CO3=O,NO3=O,O,NH4=,H" for (NH4)2HPO4.</li>
-  <li>Hydroxides, oxyhydroxides and hydrates (Mg(OH)2, FeO(OH), Ba(OH)2(H2O)8, Ni(NO3)2(H2O)6): add H to the do not balance list, e.g. "CO3=O,NO3=O,O,H". While O is on the list, that alone takes care of the water. H2O= is needed only when O is not on the list.</li>
-  <li>Isotopes can be specified. For example, you can target Sm(B_11)5B_10, with Sm, B_11, and B_10 as starting materials.</li>
+  <li><b>What it does.</b> It finds the ratio of starting materials that gives the target with every element balanced, then scales that to your total mass. Atoms that leave as gas (CO<sub>2</sub>, NO<sub>x</sub>, H<sub>2</sub>O, NH<sub>3</sub>, and O<sub>2</sub> when open to air) are left out of the balance.</li>
+  <li><b>Formulas.</b> Capital letters matter: Co is cobalt, CO is carbon and oxygen. Decimals are fine: La1.85Sr0.15CuO4. Separate starting materials with commas.</li>
+  <li><b>Hydrates.</b> Write the water as its own group: Ni(NO3)2(H2O)6, not Ni(NO3)2&middot;6H2O or Ni(NO3)2H12O6.</li>
+  <li><b>Groups.</b> One level of parentheses only. Ba3(Co(CN)6)2 is read wrongly; write it as Ba3Co2C12N12.</li>
+  <li><b>Nitrate or oxynitride.</b> Ba(NO3)2 is read as a nitrate and ZrNbO3N as an oxynitride. Write BaN2O6 to force an oxynitride, or ZrNbNO3 to force a nitrate.</li>
+  <li><b>Isotopes.</b> Use an underscore: target Sm(B_11)5B_10 from Sm, B_11 and B_10.</li>
+  <li><b>Reading the result.</b> "Li2CO3 as Li2" shows the part of each material that is balanced. A warning such as "YB could be Yb" tells you how an ambiguous formula was read; if the reading is right, ignore it.</li>
+  <li><b>Check it.</b> Look at the balanced reaction at the top of the result. If it is not the reaction you meant, change the setup or the tick boxes.</li>
 </ul>
-<p class="small">A JavaScript port of <a href="https://github.com/tmcqueen-materials/chemsolve">ChemSolve</a> by the McQueen Lab, Johns Hopkins University, released under the GNU GPL version 2. One change from the original: units removed with UNIT= (hydrate water, ammonium) are dropped from the balance; the original reports those starting materials as not used. The port's source, <a href="assets/js/chemsolve.js">chemsolve.js</a>, is under the same license. <a href="members.html">All group tools</a></p>
+<p class="small">A JavaScript port of <a href="https://github.com/tmcqueen-materials/chemsolve">ChemSolve</a> by the McQueen Lab, Johns Hopkins University, released under the GNU GPL version 2. Changes from the original: the reaction setup and tick boxes above replace the typed do-not-balance list, and units removed with UNIT= (such as NH4=) are dropped from the balance, where the original reports those materials as not used. The port's source, <a href="assets/js/chemsolve.js">chemsolve.js</a>, is under the same license. <a href="members.html">All group tools</a></p>
 
 </div>
 </div>
@@ -75,6 +96,27 @@
   function cleanTokens(s) { return s.replace(/[^a-zA-Z0-9.,=]/g, ""); }
   // Names, warnings and errors come back as HTML (<sub>, <sup>, <I>), as on the original page.
   // They are safe to insert because the filters above remove < > & " ' from every input.
+
+  // The reaction setup and tick boxes write the do-not-balance list, most specific entries
+  // first (the order matters: H2O must come before O, or O strips the oxygen first).
+  // Sealed: nothing leaves, so the list is empty. Open to air: the ticked gases, then O.
+  var ORDER = ["CO3=O", "NO3=O", "NH4=", "H2O", "C"];
+  function buildList() {
+    var open = document.querySelector('input[name="cs-setup"]:checked').value === "open";
+    var ticked = Array.prototype.map.call(document.querySelectorAll(".cs-lost:checked"), function (b) { return b.value; });
+    var list = ORDER.filter(function (x) { return ticked.indexOf(x) >= 0; });
+    if (open) list.push("O");
+    document.getElementById("cs-dummy").value = list.join(",");
+  }
+  document.querySelectorAll('input[name="cs-setup"]').forEach(function (r) {
+    r.addEventListener("change", function () {
+      // sealed means nothing escapes; open to air restores the usual gases
+      var open = r.value === "open";
+      document.querySelectorAll(".cs-lost").forEach(function (b) { b.checked = open; });
+      buildList();
+    });
+  });
+  document.querySelectorAll(".cs-lost").forEach(function (b) { b.addEventListener("change", buildList); });
 
   document.getElementById("csform").addEventListener("submit", function (ev) {
     ev.preventDefault();

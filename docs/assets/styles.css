@@ -219,6 +219,12 @@ p{margin:0 0 13px}
 .csquery input[type=text]:focus{outline:2px solid #5B7FA3;outline-offset:0;border-color:#5B7FA3}
 .csdesc{font-size:13px;line-height:1.45;color:var(--muted)}
 .csdesc select{font:inherit;font-size:13px}
+.csopts label{display:block;margin:3px 0;font-size:14.5px}
+.csopts > .csdesc{display:block;margin-bottom:4px}
+.csopts input{margin-right:6px}
+.csadv{margin:0 0 16px;font-size:14px}
+.csadv summary{cursor:pointer;color:var(--muted)}
+.csadv input[type=text]{font:14px Menlo,Consolas,monospace;padding:6px 8px;border:1px solid #9AA7B3;border-radius:3px;width:100%;max-width:420px;margin-top:4px}
 .csbtn{font:inherit;font-size:15px;padding:7px 22px;border:1px solid var(--link);background:var(--link);color:#fff;border-radius:3px;cursor:pointer}
 .csbtn:hover{background:#8C1526}
 .csanswer pre{font:14px/1.55 Menlo,Consolas,"Courier New",monospace;color:#1F4E8C;margin:0;white-space:pre}
