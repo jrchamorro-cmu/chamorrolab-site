@@ -84,6 +84,9 @@ PAGES = [
     dict(key="members", file="members.html", nav="Members", unlisted=True, noanalytics=True,
          title=f"Group tools | {SITE_NAME}",
          desc="Tools for members of the Chamorro Research Group."),
+    dict(key="chemsolve", file="chemsolve.html", nav="ChemSolve", unlisted=True, noanalytics=True,
+         title=f"ChemSolve | {SITE_NAME}",
+         desc="Stoichiometry for solid state synthesis, for members of the Chamorro Research Group."),
 ]
 
 EXT = {"IMG": ".jpg", "PNG": ".png", "SVG": ".svg"}

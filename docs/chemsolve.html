@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ChemSolve | Chamorro Research Group</title>
+<meta name="description" content="Stoichiometry for solid state synthesis, for members of the Chamorro Research Group.">
+<link rel="canonical" href="https://chamorrolab.andrew.cmu.edu/chemsolve.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Chamorro Research Group">
+<meta property="og:title" content="ChemSolve | Chamorro Research Group">
+<meta property="og:description" content="Stoichiometry for solid state synthesis, for members of the Chamorro Research Group.">
+<meta property="og:url" content="https://chamorrolab.andrew.cmu.edu/chemsolve.html">
+<meta property="og:image" content="https://chamorrolab.andrew.cmu.edu/assets/img/grouppic.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#C41230">
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/styles.css?v=8f2d0a08">
+<meta name="robots" content="noindex">
+</head>
+<body>
+
+<div class="topband"></div>
+<div class="masthead">
+  <div class="wrap">
+    <div class="mhrow">
+      <div>
+        <h1><a href="index.html">Chamorro Research Group</a></h1>
+      </div>
+      <img class="cmulogo" src="assets/img/cmulogo.png" alt="Carnegie Mellon University">
+    </div>
+    <nav id="nav">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="people.html">People</a>
+      <a href="publications.html">Publications</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="resources.html">Resources</a>
+    </nav>
+  </div>
+</div>
+
+<main class="wrap">
+
+<section class="page visible" id="pg-chemsolve">
+<h2>ChemSolve</h2>
+
+<div id="gate">
+  <p>This tool is for members of the Chamorro Research Group. Enter the group passphrase. This browser remembers it after the first time.</p>
+  <form id="gateform" class="gateform" autocomplete="off">
+    <input id="gatepass" type="password" aria-label="Group passphrase" placeholder="Passphrase" autocapitalize="off" autocorrect="off" spellcheck="false">
+    <button type="submit">Open</button>
+  </form>
+  <p id="gatemsg" class="small" hidden>That passphrase is not right. Ask Juan or a group member.</p>
+</div>
+
+<div id="members" hidden>
+  <p class="small">Stoichiometry for solid state synthesis. Runs entirely in your browser: nothing you type is sent to any server or recorded. <a href="members.html">All group tools</a></p>
+
+  <form id="csform" class="csform" autocomplete="off">
+    <label for="cs-target">Target formula</label>
+    <div><input id="cs-target" type="text" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="e.g. LiRh2O4">
+      <span class="note">The compound you want to make.</span></div>
+
+    <label for="cs-source">Starting materials</label>
+    <div><input id="cs-source" type="text" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="e.g. Li2CO3,Rh2O3">
+      <span class="note">Metals, oxides, carbonates, nitrates, and so on, separated by commas.</span></div>
+
+    <label for="cs-dummy">Do not balance</label>
+    <div><input id="cs-dummy" type="text" autocapitalize="off" autocorrect="off" spellcheck="false" value="CO3=O,NO3=O,O">
+      <span class="note">Ignored for the atom balance. CO3=O treats Na2CO3 as Na2O; NO3=O treats NaNO3 as NaO; O lets oxygen exchange with the atmosphere.</span></div>
+
+    <label for="cs-amount">Quantity (mg)</label>
+    <div><input id="cs-amount" type="text" inputmode="decimal" value="300">
+      <span class="note">Total mass of
+        <select id="cs-qtype" aria-label="Quantity refers to">
+          <option value="1">starting materials</option>
+          <option value="2">product</option>
+        </select>, in milligrams.</span></div>
+
+    <div></div>
+    <div><button type="submit">Calculate</button></div>
+  </form>
+
+  <div id="cs-out" class="csout" hidden>
+    <pre id="cs-reaction"></pre>
+    <pre id="cs-mw"></pre>
+    <table class="cstable">
+      <thead><tr><th>Material</th><th>Quantity (mg)</th></tr></thead>
+      <tbody id="cs-rows"></tbody>
+    </table>
+  </div>
+  <div id="cs-msgs"></div>
+
+  <h3 class="csnotes">Notes</h3>
+  <ul class="csnotelist">
+    <li>NaNO3 and Ba(NO3)2 are read as nitrates; ZrNbO3N is read as an oxynitride. Write BaN2O6 to force an oxynitride reading of Ba(NO3)2, or ZrNbNO3 to force a nitrate reading of ZrNbO3N.</li>
+    <li>Order the do-not-balance list from most to least specific.</li>
+    <li>Only single elements can be ignored directly. Hydrates such as Ni(NO3)2(H2O)6 are not handled correctly yet: the calculation reports the hydrate as not used.</li>
+    <li>Isotopes use an underscore. For example, target Sm(B_11)5B_10 from Sm, B_11 and B_10.</li>
+  </ul>
+  <p class="small">A JavaScript port of <a href="https://github.com/tmcqueen-materials/chemsolve">ChemSolve</a> by the McQueen Lab, Johns Hopkins University, released under the GNU GPL version 2. The port's source is <a href="assets/js/chemsolve.js">chemsolve.js</a>, under the same license.</p>
+</div>
+
+<script src="assets/js/gate.js"></script>
+<script src="assets/js/chemsolve.js"></script>
+<script>
+(function () {
+  // The same input filters as the ChemSolve web page: formulas and amounts keep only
+  // letters, digits, . , ( ) _ ; the do-not-balance list keeps letters, digits, . , =
+  function clean(s) { return s.replace(/[^a-zA-Z0-9.,()_]/g, ""); }
+  function cleanTokens(s) { return s.replace(/[^a-zA-Z0-9.,=]/g, ""); }
+  // Names, warnings and errors come back as HTML (<sub>, <sup>, <I>), as on the original page.
+  // They are safe to insert because the filters above remove < > & " ' from every input.
+
+  document.getElementById("csform").addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    var target = clean(document.getElementById("cs-target").value);
+    var source = clean(document.getElementById("cs-source").value);
+    var dummy = cleanTokens(document.getElementById("cs-dummy").value);
+    var amount = clean(document.getElementById("cs-amount").value);
+    var qtype = document.getElementById("cs-qtype").value;
+    var out = document.getElementById("cs-out");
+    var msgs = document.getElementById("cs-msgs");
+    msgs.innerHTML = "";
+    out.hidden = true;
+
+    var errors = [];
+    if (!target) errors.push("Target not specified.");
+    if (!source) errors.push("Starting materials not specified.");
+    if (!amount) errors.push("Quantity not specified.");
+    var r = null;
+    if (!errors.length) {
+      try { r = window.ChemSolve.solve(target, source, dummy, amount, qtype); }
+      catch (e) { errors.push("The calculation failed: " + e.message); }
+    }
+    if (r && r.ok) {
+      document.getElementById("cs-reaction").textContent = r.reaction;
+      document.getElementById("cs-mw").textContent = r.mw + " (molecular weights in g/mol)";
+      document.getElementById("cs-rows").innerHTML = r.rows.map(function (row) {
+        return "<tr><td>" + row[0] + "</td><td>" + row[2] + "</td></tr>";
+      }).join("");
+      out.hidden = false;
+    }
+    var warnings = r ? r.warnings : [];
+    if (r) errors = errors.concat(r.errors);
+    msgs.innerHTML =
+      warnings.map(function (w) { return '<p class="cswarn"><b>Warning:</b> ' + w + "</p>"; }).join("") +
+      errors.map(function (e) { return '<p class="cserr"><b>Error:</b> ' + e + "</p>"; }).join("");
+  });
+})();
+</script>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>&copy; 2026 Chamorro Research Group</div>
+    <div><a class="deptlink" href="https://mse.engineering.cmu.edu/">Materials Science and Engineering <span class="chev" aria-hidden="true">&#8250;</span></a></div>
+  </div>
+</footer>
+
+</body>
+</html>

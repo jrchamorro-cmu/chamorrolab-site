@@ -16,7 +16,7 @@
 <meta name="theme-color" content="#C41230">
 <link rel="icon" href="assets/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<link rel="stylesheet" href="assets/styles.css?v=170aff2b">
+<link rel="stylesheet" href="assets/styles.css?v=8f2d0a08">
 <meta name="robots" content="noindex">
 </head>
 <body>
@@ -58,41 +58,13 @@
 <div id="members" hidden>
   <div class="rescol">
     <ul>
-      <li>ChemSolve, stoichiometry for solid state synthesis <span class="note">(in preparation)</span></li>
+      <li><a href="chemsolve.html">ChemSolve</a> <span class="note">(stoichiometry for solid state synthesis)</span></li>
     </ul>
   </div>
   <p class="small">Calculations on these pages run in your browser. Nothing you type is sent to any server or recorded.</p>
 </div>
 
-<script>
-// Group passphrase gate. The page compares a SHA-256 hash of what is typed with the one
-// below and remembers a match in this browser's localStorage. It keeps casual visitors out;
-// it is not security, since this source is public. To change the passphrase, replace HASH
-// with the output of: printf %s "newphrase" | shasum -a 256   (lower case, no spaces)
-(function () {
-  var HASH = "0a8d171a0f9b8fe0ae4ff1871604bbaea03feae754cec2b9ba930421da9acfbe";
-  var KEY = "crg-members";
-  function show() {
-    document.getElementById("gate").hidden = true;
-    document.getElementById("members").hidden = false;
-  }
-  try { if (localStorage.getItem(KEY) === HASH) { show(); return; } } catch (e) {}
-  async function sha256(text) {
-    var buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(text));
-    return Array.from(new Uint8Array(buf)).map(function (b) { return b.toString(16).padStart(2, "0"); }).join("");
-  }
-  document.getElementById("gateform").addEventListener("submit", async function (ev) {
-    ev.preventDefault();
-    var typed = document.getElementById("gatepass").value.trim().toLowerCase().replace(/\s+/g, "");
-    if (await sha256(typed) === HASH) {
-      try { localStorage.setItem(KEY, HASH); } catch (e) {}
-      show();
-    } else {
-      document.getElementById("gatemsg").hidden = false;
-    }
-  });
-})();
-</script>
+<script src="assets/js/gate.js"></script>
 </section>
 
 </main>

@@ -1,0 +1,614 @@
+[
+ {
+  "id": "t001",
+  "note": "Negative value for Array",
+  "target": "SnO4",
+  "source": "Sn,O",
+  "dummy": "OO",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t002",
+  "note": "dup dummy element",
+  "target": "SnO4",
+  "source": "SnO2",
+  "dummy": "O2O",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t003",
+  "note": "float subscript",
+  "target": "Li99999999999999999999O",
+  "source": "Li2O",
+  "dummy": "CO3=O,NO3=O,O",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t004",
+  "note": "int max subscript",
+  "target": "Li9223372036854775807O",
+  "source": "Li2O",
+  "dummy": "CO3=O,NO3=O,O",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t005",
+  "note": "int overflow in make_flat",
+  "target": "(Li9223372036854775807)2O",
+  "source": "Li2O",
+  "dummy": "CO3=O,NO3=O,O",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t006",
+  "note": "15-digit int subscript",
+  "target": "Li123456789012345O",
+  "source": "Li",
+  "dummy": "O",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t007",
+  "note": "0.1+0.2 subscript",
+  "target": "Li0.1Li0.2O",
+  "source": "Li2O",
+  "dummy": "CO3=O,NO3=O,O",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t008",
+  "note": "tricky",
+  "target": "Li0.3O",
+  "source": "Li2O",
+  "dummy": "CO3=O,NO3=O,O",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t009",
+  "note": "case duplicates in make_flat",
+  "target": "LiliO",
+  "source": "Li2O",
+  "dummy": "CO3=O,NO3=O,O",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t010",
+  "note": "tricky",
+  "target": "liLiO",
+  "source": "LI2O",
+  "dummy": "CO3=O,NO3=O,O",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t011",
+  "note": "flat hydrate remap",
+  "target": "CuSO4H2O",
+  "source": "CuSO4H2O",
+  "dummy": "H2O=,O",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t012",
+  "note": "flat hydrate",
+  "target": "CuO",
+  "source": "CuSO4H2O",
+  "dummy": "SO4=O,H2O=,O",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t013",
+  "note": "H2O= vs H2O2",
+  "target": "CuO",
+  "source": "CuH2O2",
+  "dummy": "H2O=,O",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t014",
+  "note": "repeated remap",
+  "target": "BaO",
+  "source": "Ba(NO3)2",
+  "dummy": "NO3=O,NO3=O,O",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t015",
+  "note": "tricky",
+  "target": "Ba(NO3)2",
+  "source": "Ba(NO3)2",
+  "dummy": "NO3=O,O",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t016",
+  "note": "tricky",
+  "target": "Na3N",
+  "source": "NaNO3,N",
+  "dummy": "NO3=O,O",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t017",
+  "note": "tricky",
+  "target": "CO3",
+  "source": "CO3",
+  "dummy": "CO3=O",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t018",
+  "note": "target remap only if i==0",
+  "target": "CO3",
+  "source": "C,O",
+  "dummy": "CO3=O",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t019",
+  "note": "tricky",
+  "target": "CO3",
+  "source": "C,O,CO3",
+  "dummy": "CO3=O",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t020",
+  "note": "isotopes",
+  "target": "B_10B_11",
+  "source": "B_10,B_11",
+  "dummy": "",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t021",
+  "note": "isotope equal to std weight",
+  "target": "B_10.811B",
+  "source": "B",
+  "dummy": "",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t022",
+  "note": "double iso marker",
+  "target": "B_11_12",
+  "source": "B_11",
+  "dummy": "",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t023",
+  "note": "tricky",
+  "target": "Fe_56_O",
+  "source": "Fe_56,O",
+  "dummy": "",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t024",
+  "note": "int atomic weights",
+  "target": "Tc2O7",
+  "source": "Tc,O",
+  "dummy": "",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t025",
+  "note": "int mass path",
+  "target": "Tc",
+  "source": "Tc",
+  "dummy": "",
+  "amount": "98",
+  "quantType": "1"
+ },
+ {
+  "id": "t026",
+  "note": "int moles",
+  "target": "B_11",
+  "source": "B_11",
+  "dummy": "",
+  "amount": "22",
+  "quantType": "1"
+ },
+ {
+  "id": "t027",
+  "note": "int moles q2",
+  "target": "B_11",
+  "source": "B_11",
+  "dummy": "",
+  "amount": "22",
+  "quantType": "2"
+ },
+ {
+  "id": "t028",
+  "note": "int mw sum",
+  "target": "Pm2Po3",
+  "source": "Pm,Po",
+  "dummy": "",
+  "amount": "1234",
+  "quantType": "1"
+ },
+ {
+  "id": "t029",
+  "note": "huge amount",
+  "target": "LiRh2O4",
+  "source": "Li2CO3,Rh2O3",
+  "dummy": "CO3=O,NO3=O,O",
+  "amount": "1e308",
+  "quantType": "1"
+ },
+ {
+  "id": "t030",
+  "note": "inf product",
+  "target": "LiRh2O4",
+  "source": "Li2CO3,Rh2O3",
+  "dummy": "CO3=O,NO3=O,O",
+  "amount": "1e308",
+  "quantType": "2"
+ },
+ {
+  "id": "t031",
+  "note": "tricky",
+  "target": "LiRh2O4",
+  "source": "Li2CO3,Rh2O3",
+  "dummy": "CO3=O,NO3=O,O",
+  "amount": "5e-324",
+  "quantType": "1"
+ },
+ {
+  "id": "t032",
+  "note": "negative amount",
+  "target": "LiRh2O4",
+  "source": "Li2CO3,Rh2O3",
+  "dummy": "CO3=O,NO3=O,O",
+  "amount": "-300",
+  "quantType": "1"
+ },
+ {
+  "id": "t033",
+  "note": "tricky",
+  "target": "LiRh2O4",
+  "source": "Li2CO3,Rh2O3",
+  "dummy": "CO3=O,NO3=O,O",
+  "amount": "0x1A",
+  "quantType": "1"
+ },
+ {
+  "id": "t034",
+  "note": "tricky",
+  "target": "LiRh2O4",
+  "source": "Li2CO3,Rh2O3",
+  "dummy": "CO3=O,NO3=O,O",
+  "amount": ".",
+  "quantType": "1"
+ },
+ {
+  "id": "t035",
+  "note": "tricky",
+  "target": "LiRh2O4",
+  "source": "Li2CO3,Rh2O3",
+  "dummy": "CO3=O,NO3=O,O",
+  "amount": "1.5e3",
+  "quantType": "2"
+ },
+ {
+  "id": "t036",
+  "note": "near-singular",
+  "target": "Fe0.3333333333333O",
+  "source": "Fe,Fe2O3",
+  "dummy": "",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t037",
+  "note": "tricky",
+  "target": "Fe3O4",
+  "source": "FeO,Fe2O3,Fe",
+  "dummy": "",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t038",
+  "note": "underdetermined with O free",
+  "target": "Fe3O4",
+  "source": "Fe3O4,FeO",
+  "dummy": "O",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t039",
+  "note": "non elements",
+  "target": "A",
+  "source": "B",
+  "dummy": "CO3=O,NO3=O,O",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t040",
+  "note": "all dummied",
+  "target": "O",
+  "source": "O",
+  "dummy": "O",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t041",
+  "note": "tricky",
+  "target": "O2",
+  "source": "O",
+  "dummy": "",
+  "amount": "300",
+  "quantType": "2"
+ },
+ {
+  "id": "t042",
+  "note": "tricky",
+  "target": "LiO",
+  "source": "Li,O,Li2O",
+  "dummy": "",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t043",
+  "note": "tricky",
+  "target": "LiO",
+  "source": "Li2O,Li,O",
+  "dummy": "",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t044",
+  "note": "tricky",
+  "target": "Li3N",
+  "source": "Li,N2",
+  "dummy": "",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t045",
+  "note": "tricky",
+  "target": "Hg2Cu2F6S",
+  "source": "HgF2,CuF2,HgS,Cu",
+  "dummy": "",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t046",
+  "note": "tricky",
+  "target": "Hg2Cu2F6S",
+  "source": "HgF2,CuF2,HgS",
+  "dummy": "F",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t047",
+  "note": "tricky",
+  "target": "YBa2Cu3O6.95",
+  "source": "Y2O3,BaO2,CuO",
+  "dummy": "",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t048",
+  "note": "tricky",
+  "target": "YBa2Cu3O7",
+  "source": "YBa2Cu3O7",
+  "dummy": "",
+  "amount": "9.95",
+  "quantType": "2"
+ },
+ {
+  "id": "t049",
+  "note": "tie-ish display",
+  "target": "CoO",
+  "source": "CoO",
+  "dummy": "",
+  "amount": "0.35",
+  "quantType": "1"
+ },
+ {
+  "id": "t050",
+  "note": "exact tie display",
+  "target": "NiO",
+  "source": "NiO",
+  "dummy": "",
+  "amount": "0.25",
+  "quantType": "1"
+ },
+ {
+  "id": "t051",
+  "note": "tricky",
+  "target": "NiO",
+  "source": "NiO",
+  "dummy": "",
+  "amount": "0.25",
+  "quantType": "2"
+ },
+ {
+  "id": "t052",
+  "note": "tricky",
+  "target": "NiO",
+  "source": "NiO",
+  "dummy": "",
+  "amount": "2.5",
+  "quantType": "2"
+ },
+ {
+  "id": "t053",
+  "note": "tricky",
+  "target": "NiO",
+  "source": "NiO",
+  "dummy": "",
+  "amount": "1.05",
+  "quantType": "2"
+ },
+ {
+  "id": "t054",
+  "note": "tricky",
+  "target": "(((Li)))2O",
+  "source": "Li2O",
+  "dummy": "CO3=O,NO3=O,O",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t055",
+  "note": "tricky",
+  "target": "Li(O)0",
+  "source": "Li",
+  "dummy": "",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t056",
+  "note": "tricky",
+  "target": "Li(O)0.0",
+  "source": "Li",
+  "dummy": "",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t057",
+  "note": "dot group count",
+  "target": "Li(O).",
+  "source": "Li",
+  "dummy": "",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t058",
+  "note": "tricky",
+  "target": "Li2O",
+  "source": "Li(O)",
+  "dummy": "",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t059",
+  "note": "tricky",
+  "target": "Li_",
+  "source": "Li",
+  "dummy": "",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t060",
+  "note": "order of remap vs dummy",
+  "target": "LiRh2O4",
+  "source": "Li2CO3,Rh2O3",
+  "dummy": "O=,CO3=O",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t061",
+  "note": "tricky",
+  "target": "Li2CO3",
+  "source": "Li2CO3",
+  "dummy": "CO3=O",
+  "amount": "300",
+  "quantType": "2"
+ },
+ {
+  "id": "t062",
+  "note": "tricky",
+  "target": "Li2(CO3)",
+  "source": "Li2O",
+  "dummy": "CO3=O,O",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t063",
+  "note": "tricky",
+  "target": "Li2(CO3)1.5",
+  "source": "Li2O",
+  "dummy": "CO3=O,O",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t064",
+  "note": "count string vs loose compare 3 vs 3.0",
+  "target": "Li2CO3.0",
+  "source": "Li2O",
+  "dummy": "CO3=O,O",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t065",
+  "note": "03 vs 3",
+  "target": "Li2CO03",
+  "source": "Li2O",
+  "dummy": "CO3=O,O",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t066",
+  "note": "tricky",
+  "target": "Ba 2",
+  "source": "Ba",
+  "dummy": "",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t067",
+  "note": "tricky",
+  "target": "Ba2 ",
+  "source": "Ba",
+  "dummy": "",
+  "amount": "300",
+  "quantType": "1"
+ },
+ {
+  "id": "t068",
+  "note": "tricky",
+  "target": "Ba\t2",
+  "source": "Ba",
+  "dummy": "",
+  "amount": "300",
+  "quantType": "1"
+ }
+]
