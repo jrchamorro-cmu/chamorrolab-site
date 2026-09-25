@@ -6,7 +6,8 @@ import { createRequire } from 'module';
 const CS = createRequire(import.meta.url)('../../assets/js/chemsolve.js');
 const MW = { NiO: 74.69, NiNO3_6H2O: 290.79, La2O3: 325.81, LaNiO3: 245.60, CuSO4_5H2O: 249.69, CuO: 79.55,
   YNO3_6H2O: 383.01, CuNO3_3H2O: 241.60, Y2Cu2O5: 384.90, CaCO3: 100.09, NH42HPO4: 132.06, Ca3PO42: 310.18,
-  YCl3_6H2O: 303.36, Y2O3: 225.81, CoC2O4_2H2O: 182.98, CoO: 74.93, Cs2CO3: 325.82, NH4Cl: 53.49, CsCl: 168.36 };
+  YCl3_6H2O: 303.36, MgOH2: 58.32, AlOH3: 78.00, AlOOH: 59.99, MgAl2O4: 142.27, LiOH_H2O: 41.96,
+  FeOOH: 88.85, LiFeO2: 94.78, BaOH2_8H2O: 315.46, TiO2: 79.87, BaTiO3: 233.19, Y2O3: 225.81, CoC2O4_2H2O: 182.98, CoO: 74.93, Cs2CO3: 325.82, NH4Cl: 53.49, CsCl: 168.36 };
 // [target, sources, dummy, mg, quantType, [[coefficient, MW] for each source in order], product MW]
 const T = [
   ['NiO', 'Ni(NO3)2(H2O)6', 'CO3=O,NO3=O,O,H2O=', 300, 1, [[1, MW.NiNO3_6H2O]], MW.NiO],
@@ -19,6 +20,13 @@ const T = [
   ['Y2O3', 'YCl3(H2O)6', 'O,H2O=,Cl', 300, 1, [[2, MW.YCl3_6H2O]], MW.Y2O3],
   ['CoO', 'CoC2O4(H2O)2', 'C2O4=O,H2O=,O', 300, 1, [[1, MW.CoC2O4_2H2O]], MW.CoO],
   ['Ca3(PO4)2', 'CaCO3,(NH4)2HPO4', 'CO3=O,NO3=O,O,NH4=,H', 300, 1, [[3, MW.CaCO3], [2, MW.NH42HPO4]], MW.Ca3PO42],
+  // hydroxides, oxyhydroxides and hydroxide hydrates: ignoring H is enough, with or without H2O=
+  ['MgAl2O4', 'Mg(OH)2,Al(OH)3', 'CO3=O,NO3=O,O,H', 300, 1, [[1, MW.MgOH2], [2, MW.AlOH3]], MW.MgAl2O4],
+  ['MgAl2O4', 'Mg(OH)2,AlOOH', 'CO3=O,NO3=O,O,H2O=,H', 300, 1, [[1, MW.MgOH2], [2, MW.AlOOH]], MW.MgAl2O4],
+  ['LiFeO2', 'LiOH(H2O),FeO(OH)', 'CO3=O,NO3=O,O,H2O=,H', 300, 1, [[1, MW.LiOH_H2O], [1, MW.FeOOH]], MW.LiFeO2],
+  ['LiFeO2', 'LiOH(H2O),FeO(OH)', 'CO3=O,NO3=O,O,H', 300, 1, [[1, MW.LiOH_H2O], [1, MW.FeOOH]], MW.LiFeO2],
+  ['BaTiO3', 'Ba(OH)2(H2O)8,TiO2', 'CO3=O,NO3=O,O,H2O=,H', 300, 1, [[1, MW.BaOH2_8H2O], [1, MW.TiO2]], MW.BaTiO3],
+  ['LaNiO3', 'La2O3,Ni(NO3)2(H2O)6', 'CO3=O,NO3=O,O,H', 300, 1, [[0.5, MW.La2O3], [1, MW.NiNO3_6H2O]], MW.LaNiO3],
   ['CsCl', 'Cs2CO3,NH4Cl', 'CO3=O,NO3=O,O,NH4=,H', 300, 1, [[0.5, MW.Cs2CO3], [1, MW.NH4Cl]], MW.CsCl],
 ];
 let pass = 0;
@@ -36,5 +44,5 @@ for (const [tg, src, dm, mg, q, coef, pmw] of T) {
   console.log(ok ? 'ok  ' : 'FAIL', tg, '<-', src, '|', dm, '|', r.ok ? r.rows.map(x => x[2]).join(' / ') : r.errors[0]);
   if (ok) pass++;
 }
-console.log(`${pass}/${T.length} unit-removal cases match hand-calculated masses`);
+console.log(`${pass}/${T.length} unit-removal, hydrate and hydroxide cases match hand-calculated masses`);
 process.exit(pass === T.length ? 0 : 1);
