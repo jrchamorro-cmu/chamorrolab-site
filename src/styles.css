@@ -207,8 +207,7 @@ p{margin:0 0 13px}
 .rescol ul{margin:0 0 22px;padding-left:18px}
 .rescol li{padding:3px 0}
 .rescol .note{color:var(--muted);font-size:13px}
-/* ChemSolve: the original ChemSolve layout in a narrow column inside the site layout */
-.cs{max-width:780px;margin:0 auto}
+/* ChemSolve: the original ChemSolve layout inside the site layout, at the full content width */
 .cs > h2:first-child{margin-top:34px}
 .csbox{background:#F3F6F9;border:1px solid #CBD5DE;padding:18px 20px;margin:0 0 16px}
 .csbox > p:first-child{margin-top:0}
@@ -216,7 +215,7 @@ p{margin:0 0 13px}
 .csquery{border-collapse:collapse;width:100%;margin:4px 0 16px;background:#fff}
 .csquery th,.csquery td{border:1px solid #D5DDE4;padding:8px 10px;vertical-align:middle;text-align:left}
 .csquery th{font-size:14px;font-weight:700;white-space:nowrap;background:#E9EEF3}
-.csquery input[type=text]{font:inherit;font-size:15px;padding:6px 8px;border:1px solid #9AA7B3;border-radius:3px;width:190px}
+.csquery input[type=text]{font:inherit;font-size:15px;padding:6px 8px;border:1px solid #9AA7B3;border-radius:3px;width:240px}
 .csquery input[type=text]:focus{outline:2px solid #5B7FA3;outline-offset:0;border-color:#5B7FA3}
 .csdesc{font-size:13px;line-height:1.45;color:var(--muted)}
 .csdesc select{font:inherit;font-size:13px}
